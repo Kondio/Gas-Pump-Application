@@ -1,0 +1,12 @@
+c:\users\hris\documents\visual studio 2015\Projects\LoginAndSubMenus\LoginAndSubMenus\bin\Debug\LoginAndSubMenus.exe.config
+C:\Users\Hris\documents\visual studio 2015\Projects\LoginAndSubMenus\LoginAndSubMenus\bin\Debug\LoginAndSubMenus.exe
+C:\Users\Hris\documents\visual studio 2015\Projects\LoginAndSubMenus\LoginAndSubMenus\bin\Debug\LoginAndSubMenus.pdb
+C:\Users\Hris\documents\visual studio 2015\Projects\LoginAndSubMenus\LoginAndSubMenus\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Hris\documents\visual studio 2015\Projects\LoginAndSubMenus\LoginAndSubMenus\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Hris\documents\visual studio 2015\Projects\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.csprojResolveAssemblyReference.cache
+C:\Users\Hris\documents\visual studio 2015\Projects\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.Form1.resources
+C:\Users\Hris\documents\visual studio 2015\Projects\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.Properties.Resources.resources
+C:\Users\Hris\documents\visual studio 2015\Projects\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.csproj.GenerateResource.Cache
+C:\Users\Hris\documents\visual studio 2015\Projects\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.exe
+C:\Users\Hris\documents\visual studio 2015\Projects\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.pdb
+C:\Users\Hris\documents\visual studio 2015\Projects\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.Form2.resources
