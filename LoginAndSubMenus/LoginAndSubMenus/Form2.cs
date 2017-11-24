@@ -22,6 +22,7 @@ namespace LoginAndSubMenus
             InitializeComponent();
             sa = new SqlDataAdapter();
             ds = new DataSet();
+            
             try
             {
 
@@ -194,6 +195,26 @@ namespace LoginAndSubMenus
                     MessageBox.Show("You have not selected an employee");
                 }
             }
+        }
+
+        private void Form2_Resize(object sender, EventArgs e)
+        {
+            //this.Refresh();
+            //foreach(Button b in this.Controls.OfType<Button>())
+            //{
+            //    b.Location = new Point((this.ClientRectangle.Width / 2), (this.ClientRectangle.Height / 2) + 100);
+            //}
+            //panel1.Location = new Point((this.ClientRectangle.Width / 2) -60 , (this.ClientRectangle.Height / 2) -200);
+            //panel2.Location = new Point((this.ClientRectangle.Width / 2), (this.ClientRectangle.Height / 2) + 100);
+            //tabControl1.Location = new Point((this.ClientRectangle.Width / 2), (this.ClientRectangle.Height / 2) + 100);
+            //foreach(Label l in this.Controls.OfType<Label>())
+            //{
+            //    l.Location = new Point((this.ClientRectangle.Width / 2), (this.ClientRectangle.Height / 2) + 100);
+            //}
+            //foreach(TextBox t in this.Controls.OfType<TextBox>())
+            //{
+            //    t.Location = new Point((this.ClientRectangle.Width / 2), (this.ClientRectangle.Height / 2) + 100);
+            //}
         }
     }
    }

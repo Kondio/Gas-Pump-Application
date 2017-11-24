@@ -10,3 +10,18 @@ C:\Users\Hris\documents\visual studio 2015\Projects\LoginAndSubMenus\LoginAndSub
 C:\Users\Hris\documents\visual studio 2015\Projects\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.exe
 C:\Users\Hris\documents\visual studio 2015\Projects\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.pdb
 C:\Users\Hris\documents\visual studio 2015\Projects\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.Form2.resources
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\LoginAndSubMenus\LoginAndSubMenus\bin\Debug\LoginAndSubMenus.exe.config
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\LoginAndSubMenus\LoginAndSubMenus\bin\Debug\LoginAndSubMenus.exe
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\LoginAndSubMenus\LoginAndSubMenus\bin\Debug\LoginAndSubMenus.pdb
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.Form1.resources
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.Form2.resources
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.Properties.Resources.resources
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.csproj.GenerateResource.Cache
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.exe
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.pdb
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\LoginAndSubMenus\LoginAndSubMenus\bin\Debug\MetroFramework.Design.dll
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\LoginAndSubMenus\LoginAndSubMenus\bin\Debug\MetroFramework.dll
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\LoginAndSubMenus\LoginAndSubMenus\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\LoginAndSubMenus\LoginAndSubMenus\obj\Debug\LoginAndSubMenus.PumpsControl.resources
