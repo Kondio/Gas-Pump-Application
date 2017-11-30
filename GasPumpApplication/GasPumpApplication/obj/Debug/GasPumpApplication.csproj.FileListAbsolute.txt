@@ -1,0 +1,15 @@
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\GasPumpApplication\GasPumpApplication\obj\Debug\GasPumpApplication.csproj.GenerateResource.Cache
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\GasPumpApplication\GasPumpApplication\obj\Debug\GasPumpApplication.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\GasPumpApplication\GasPumpApplication\bin\Debug\MetroFramework.Design.dll
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\GasPumpApplication\GasPumpApplication\bin\Debug\MetroFramework.dll
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\GasPumpApplication\GasPumpApplication\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\GasPumpApplication\GasPumpApplication\obj\Debug\GasPumpApplcation.Form1.resources
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\GasPumpApplication\GasPumpApplication\obj\Debug\GasPumpApplcation.Form2.resources
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\GasPumpApplication\GasPumpApplication\obj\Debug\GasPumpApplcation.PumpsControl.resources
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\GasPumpApplication\GasPumpApplication\bin\Debug\GasPumpApplcation.exe.config
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\GasPumpApplication\GasPumpApplication\bin\Debug\GasPumpApplcation.exe
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\GasPumpApplication\GasPumpApplication\bin\Debug\GasPumpApplcation.pdb
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\GasPumpApplication\GasPumpApplication\obj\Debug\GasPumpApplcation.Properties.Resources.resources
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\GasPumpApplication\GasPumpApplication\obj\Debug\GasPumpApplcation.exe
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\GasPumpApplication\GasPumpApplication\obj\Debug\GasPumpApplcation.pdb
+C:\Users\admin\Documents\GitHub\Gas-Pump-Application\GasPumpApplication\GasPumpApplication\obj\Debug\GasPumpApplication.csprojResolveAssemblyReference.cache

@@ -7,8 +7,8 @@
     <ProjectGuid>{87A3EF49-0145-496B-B364-0BA4D5D349D5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LoginAndSubMenus</RootNamespace>
-    <AssemblyName>LoginAndSubMenus</AssemblyName>
+    <RootNamespace>GasPumpApplcation</RootNamespace>
+    <AssemblyName>GasPumpApplcation</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -92,6 +92,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="PumpsControl.resx">
       <DependentUpon>PumpsControl.cs</DependentUpon>
