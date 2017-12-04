@@ -1,6 +1,6 @@
-﻿namespace GasPumpApplcation
+﻿namespace GasPumpApplication
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -183,7 +183,7 @@
             this.Controls.Add(panel1);
             this.Name = "Form1";
             this.Padding = new System.Windows.Forms.Padding(0, 60, 0, 0);
-            this.Text = "Risdon Gas Module";
+            this.Text = " Risdon Gas Module";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             this.ResumeLayout(false);

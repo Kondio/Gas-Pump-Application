@@ -11,10 +11,11 @@ using System.Windows.Forms;
 
 namespace GasPumpApplication
 {
-    public partial class PumpsControl : MetroForm
+    public partial class ReportsViewsScreen : MetroForm
     {
         MainMenuForm formmenu;
-        public PumpsControl()
+
+        public ReportsViewsScreen()
         {
             InitializeComponent();
         }

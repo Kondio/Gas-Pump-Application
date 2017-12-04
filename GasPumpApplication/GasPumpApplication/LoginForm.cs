@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
-using GasPumpApplication;
 
-namespace GasPumpApplcation
+namespace GasPumpApplication
 {
-    public partial class Form1 : MetroForm
+    public partial class LoginForm : MetroForm
     {
-        public static DbConn conn;
-        public Form1()
+        DbConn conn;
+        public LoginForm()
         {
             InitializeComponent();
             conn = new DbConn();
@@ -26,7 +25,7 @@ namespace GasPumpApplcation
 
             if(conn.DbAuthentication(this, metroTextBox1.Text))
             {
-                Form2 form2 = new Form2();              
+                MainMenuForm form2 = new MainMenuForm();              
                 form2.Show();
                 Hide();
             }
