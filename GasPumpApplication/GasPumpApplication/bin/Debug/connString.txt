@@ -1,0 +1,1 @@
+Data Source=INTERN; Initial Catalog=AFC; Integrated Security=True; User ID=sa; Password=Password01

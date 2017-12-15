@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CrystalDecisions.Shared;
+using CrystalDecisions.CrystalReports.Engine;
 
 namespace GasPumpApplication
 {
@@ -26,6 +28,17 @@ namespace GasPumpApplication
                 formmenu = new MainMenuForm();
             this.Visible = false;
             formmenu.Show();
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.ShowDialog();
+            ReportDocument report = new ReportDocument();
+            string filepath = openFileDialog1.FileName;
+            report.Load(filepath);
+            report.SetDatabaseLogon("sa", "Password01");
+            crystalReportViewer1.ReportSource = report;
         }
     }
 }

@@ -22,13 +22,32 @@ namespace GasPumpApplication
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
-            if(conn.DbAuthentication(this, metroTextBox1.Text))
+            try
             {
-                MainMenuForm form2 = new MainMenuForm();              
-                form2.Show();
-                Hide();
+                conn.Connect();
+                if (conn.DbAuthentication(this, metroTextBox1.Text))
+                {
+                    MainMenuForm form2 = new MainMenuForm();
+                    form2.Show();
+                    Hide();
+                }
+                
+
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                conn.Disconnect();
+            }
+           
+            
+
+            
+
         }
     }
 }

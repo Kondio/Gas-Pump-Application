@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BMDBModelStoreContainer" CdmEntityContainer="BMEntities">
+    <EntitySetMapping Name="SY_CURNCY_COD">
+      <EntityTypeMapping TypeName="BMDBModel.SY_CURNCY_COD">
+        <MappingFragment StoreEntitySet="SY_CURNCY_COD">
+          <ScalarProperty Name="CURNCY_COD" ColumnName="CURNCY_COD" />
+          <ScalarProperty Name="DESCR" ColumnName="DESCR" />
+          <ScalarProperty Name="DESCR_UPR" ColumnName="DESCR_UPR" />
+          <ScalarProperty Name="EXCH_RATE_NUMER" ColumnName="EXCH_RATE_NUMER" />
+          <ScalarProperty Name="EXCH_RATE_DENOM" ColumnName="EXCH_RATE_DENOM" />
+          <ScalarProperty Name="EXCH_RATE" ColumnName="EXCH_RATE" />
+          <ScalarProperty Name="GAIN_LOSS_METH" ColumnName="GAIN_LOSS_METH" />
+          <ScalarProperty Name="GAIN_LOSS_ACCT_NO" ColumnName="GAIN_LOSS_ACCT_NO" />
+          <ScalarProperty Name="RS_UTC_DT" ColumnName="RS_UTC_DT" />
+          <ScalarProperty Name="LST_MAINT_DT" ColumnName="LST_MAINT_DT" />
+          <ScalarProperty Name="LST_MAINT_USR_ID" ColumnName="LST_MAINT_USR_ID" />
+          <ScalarProperty Name="LST_LCK_DT" ColumnName="LST_LCK_DT" />
+          <ScalarProperty Name="ROW_TS" ColumnName="ROW_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SY_CURNCY_UNITS">
+      <EntityTypeMapping TypeName="BMDBModel.SY_CURNCY_UNITS">
+        <MappingFragment StoreEntitySet="SY_CURNCY_UNITS">
+          <ScalarProperty Name="CURNCY_COD" ColumnName="CURNCY_COD" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+          <ScalarProperty Name="CURNCY_UNIT" ColumnName="CURNCY_UNIT" />
+          <ScalarProperty Name="UNIT_TYP" ColumnName="UNIT_TYP" />
+          <ScalarProperty Name="VAL" ColumnName="VAL" />
+          <ScalarProperty Name="LST_MAINT_DT" ColumnName="LST_MAINT_DT" />
+          <ScalarProperty Name="LST_MAINT_USR_ID" ColumnName="LST_MAINT_USR_ID" />
+          <ScalarProperty Name="LST_LCK_DT" ColumnName="LST_LCK_DT" />
+          <ScalarProperty Name="ROW_TS" ColumnName="ROW_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SY_USR">
+      <EntityTypeMapping TypeName="BMDBModel.SY_USR">
+        <MappingFragment StoreEntitySet="SY_USR">
+          <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+          <ScalarProperty Name="NAM" ColumnName="NAM" />
+          <ScalarProperty Name="NAM_UPR" ColumnName="NAM_UPR" />
+          <ScalarProperty Name="INITIALS" ColumnName="INITIALS" />
+          <ScalarProperty Name="PWD" ColumnName="PWD" />
+          <ScalarProperty Name="ADRS_1" ColumnName="ADRS_1" />
+          <ScalarProperty Name="ADRS_2" ColumnName="ADRS_2" />
+          <ScalarProperty Name="ADRS_3" ColumnName="ADRS_3" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="ZIP_COD" ColumnName="ZIP_COD" />
+          <ScalarProperty Name="CNTRY" ColumnName="CNTRY" />
+          <ScalarProperty Name="CONTCT_1" ColumnName="CONTCT_1" />
+          <ScalarProperty Name="CONTCT_2" ColumnName="CONTCT_2" />
+          <ScalarProperty Name="PHONE_1" ColumnName="PHONE_1" />
+          <ScalarProperty Name="PHONE_2" ColumnName="PHONE_2" />
+          <ScalarProperty Name="FAX_1" ColumnName="FAX_1" />
+          <ScalarProperty Name="FAX_2" ColumnName="FAX_2" />
+          <ScalarProperty Name="EMAIL_ADRS_1" ColumnName="EMAIL_ADRS_1" />
+          <ScalarProperty Name="EMAIL_ADRS_2" ColumnName="EMAIL_ADRS_2" />
+          <ScalarProperty Name="URL_1" ColumnName="URL_1" />
+          <ScalarProperty Name="URL_2" ColumnName="URL_2" />
+          <ScalarProperty Name="WRKGRP_ID" ColumnName="WRKGRP_ID" />
+          <ScalarProperty Name="ALLOW_OTHR_WRKGRPS" ColumnName="ALLOW_OTHR_WRKGRPS" />
+          <ScalarProperty Name="DEPT" ColumnName="DEPT" />
+          <ScalarProperty Name="EMP_NO" ColumnName="EMP_NO" />
+          <ScalarProperty Name="SEC_COD" ColumnName="SEC_COD" />
+          <ScalarProperty Name="IS_PS_USR" ColumnName="IS_PS_USR" />
+          <ScalarProperty Name="IS_PS_MGR" ColumnName="IS_PS_MGR" />
+          <ScalarProperty Name="PS_SEC_COD" ColumnName="PS_SEC_COD" />
+          <ScalarProperty Name="IS_SLS_REP" ColumnName="IS_SLS_REP" />
+          <ScalarProperty Name="IS_BUYER" ColumnName="IS_BUYER" />
+          <ScalarProperty Name="LOGIN_DISABLED" ColumnName="LOGIN_DISABLED" />
+          <ScalarProperty Name="CHNG_PWD_NXT_LOGIN" ColumnName="CHNG_PWD_NXT_LOGIN" />
+          <ScalarProperty Name="LST_PWD_CHNG_DAT" ColumnName="LST_PWD_CHNG_DAT" />
+          <ScalarProperty Name="LST_LOGIN_DT" ColumnName="LST_LOGIN_DT" />
+          <ScalarProperty Name="LST_STR_ID" ColumnName="LST_STR_ID" />
+          <ScalarProperty Name="LST_STA_ID" ColumnName="LST_STA_ID" />
+          <ScalarProperty Name="LST_DRW_ID" ColumnName="LST_DRW_ID" />
+          <ScalarProperty Name="COMMIS_COD" ColumnName="COMMIS_COD" />
+          <ScalarProperty Name="LST_WRKGRP_ID" ColumnName="LST_WRKGRP_ID" />
+          <ScalarProperty Name="LOGIN_FAIL_CNT" ColumnName="LOGIN_FAIL_CNT" />
+          <ScalarProperty Name="PREV_PWD_1" ColumnName="PREV_PWD_1" />
+          <ScalarProperty Name="PREV_PWD_2" ColumnName="PREV_PWD_2" />
+          <ScalarProperty Name="PREV_PWD_3" ColumnName="PREV_PWD_3" />
+          <ScalarProperty Name="LST_CLCK_IN_DT" ColumnName="LST_CLCK_IN_DT" />
+          <ScalarProperty Name="LST_CLCK_OUT_DT" ColumnName="LST_CLCK_OUT_DT" />
+          <ScalarProperty Name="BIO_ID_DATA" ColumnName="BIO_ID_DATA" />
+          <ScalarProperty Name="IS_OE_USR" ColumnName="IS_OE_USR" />
+          <ScalarProperty Name="IS_OE_MGR" ColumnName="IS_OE_MGR" />
+          <ScalarProperty Name="OE_SEC_COD" ColumnName="OE_SEC_COD" />
+          <ScalarProperty Name="LST_LOGIN_WKSTN_NAM" ColumnName="LST_LOGIN_WKSTN_NAM" />
+          <ScalarProperty Name="LST_TE_LOGIN_DT" ColumnName="LST_TE_LOGIN_DT" />
+          <ScalarProperty Name="LST_TE_WRKGRP_ID" ColumnName="LST_TE_WRKGRP_ID" />
+          <ScalarProperty Name="LST_TE_LOGIN_WKSTN_NAM" ColumnName="LST_TE_LOGIN_WKSTN_NAM" />
+          <ScalarProperty Name="COPY_FRM_USR_ID" ColumnName="COPY_FRM_USR_ID" />
+          <ScalarProperty Name="RS_UTC_DT" ColumnName="RS_UTC_DT" />
+          <ScalarProperty Name="LST_MAINT_DT" ColumnName="LST_MAINT_DT" />
+          <ScalarProperty Name="LST_MAINT_USR_ID" ColumnName="LST_MAINT_USR_ID" />
+          <ScalarProperty Name="LST_LCK_DT" ColumnName="LST_LCK_DT" />
+          <ScalarProperty Name="ROW_TS" ColumnName="ROW_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="US_GASSTN_CTL">
+      <EntityTypeMapping TypeName="BMDBModel.US_GASSTN_CTL">
+        <MappingFragment StoreEntitySet="US_GASSTN_CTL">
+          <ScalarProperty Name="DOC_ID" ColumnName="DOC_ID" />
+          <ScalarProperty Name="GASSTN_STORE_ID" ColumnName="GASSTN_STORE_ID" />
+          <ScalarProperty Name="GASSTN_STATION_ID" ColumnName="GASSTN_STATION_ID" />
+          <ScalarProperty Name="GASSTN_CUST_NO" ColumnName="GASSTN_CUST_NO" />
+          <ScalarProperty Name="GASSTN_DRW_ID" ColumnName="GASSTN_DRW_ID" />
+          <ScalarProperty Name="GASSTN_FRM_GRP" ColumnName="GASSTN_FRM_GRP" />
+          <ScalarProperty Name="GASSTN_FRM" ColumnName="GASSTN_FRM" />
+          <ScalarProperty Name="DOCK_STORE_ID" ColumnName="DOCK_STORE_ID" />
+          <ScalarProperty Name="DOCK_STATION_ID" ColumnName="DOCK_STATION_ID" />
+          <ScalarProperty Name="DIESEL_COD" ColumnName="DIESEL_COD" />
+          <ScalarProperty Name="DIESEL_ITEM_NO" ColumnName="DIESEL_ITEM_NO" />
+          <ScalarProperty Name="DIESEL_PRICE_IN_NAF" ColumnName="DIESEL_PRICE_IN_NAF" />
+          <ScalarProperty Name="DIESEL_PRICE_DOCK_IN_USD" ColumnName="DIESEL_PRICE_DOCK_IN_USD" />
+          <ScalarProperty Name="DIESEL_COST_DOCK_IN_USD" ColumnName="DIESEL_COST_DOCK_IN_USD" />
+          <ScalarProperty Name="GASOLINE_COD" ColumnName="GASOLINE_COD" />
+          <ScalarProperty Name="GASOLINE_ITEM_NO" ColumnName="GASOLINE_ITEM_NO" />
+          <ScalarProperty Name="GASOLINE_PRICE_IN_NAF" ColumnName="GASOLINE_PRICE_IN_NAF" />
+          <ScalarProperty Name="EXCH_RATE_FULL_SERV" ColumnName="EXCH_RATE_FULL_SERV" />
+          <ScalarProperty Name="EXCH_RATE" ColumnName="EXCH_RATE" />
+          <ScalarProperty Name="SLS_REP" ColumnName="SLS_REP" />
+          <ScalarProperty Name="SLS_ACCT_NO" ColumnName="SLS_ACCT_NO" />
+          <ScalarProperty Name="TAX_AUTH_COD" ColumnName="TAX_AUTH_COD" />
+          <ScalarProperty Name="TAX_RUL_COD" ColumnName="TAX_RUL_COD" />
+          <ScalarProperty Name="PAY_COD_CASH_DOLLARS" ColumnName="PAY_COD_CASH_DOLLARS" />
+          <ScalarProperty Name="PAY_COD_CASH_GUILDERS" ColumnName="PAY_COD_CASH_GUILDERS" />
+          <ScalarProperty Name="PAY_COD_CHECK_DOLLARS" ColumnName="PAY_COD_CHECK_DOLLARS" />
+          <ScalarProperty Name="PAY_COD_CHECK_GUILDERS" ColumnName="PAY_COD_CHECK_GUILDERS" />
+          <ScalarProperty Name="PAY_COD_VOUCHERS" ColumnName="PAY_COD_VOUCHERS" />
+          <ScalarProperty Name="PAY_COD_STORECREDITS" ColumnName="PAY_COD_STORECREDITS" />
+          <ScalarProperty Name="BANK_ACCT_DOLLARS" ColumnName="BANK_ACCT_DOLLARS" />
+          <ScalarProperty Name="BANK_ACCT_GUILDERS" ColumnName="BANK_ACCT_GUILDERS" />
+          <ScalarProperty Name="CUT_OFF_TIME" ColumnName="CUT_OFF_TIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="US_GASSTN_HIST_BATCH">
+      <EntityTypeMapping TypeName="BMDBModel.US_GASSTN_HIST_BATCH">
+        <MappingFragment StoreEntitySet="US_GASSTN_HIST_BATCH">
+          <ScalarProperty Name="STR_ID" ColumnName="STR_ID" />
+          <ScalarProperty Name="DAT" ColumnName="DAT" />
+          <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+          <ScalarProperty Name="DESCR" ColumnName="DESCR" />
+          <ScalarProperty Name="DOC_ID" ColumnName="DOC_ID" />
+          <ScalarProperty Name="VOL_PUMPED_DIESEL" ColumnName="VOL_PUMPED_DIESEL" />
+          <ScalarProperty Name="VOL_PUMPED_GASOLINE" ColumnName="VOL_PUMPED_GASOLINE" />
+          <ScalarProperty Name="VOL_PUMPED_DIESEL_CONTROL" ColumnName="VOL_PUMPED_DIESEL_CONTROL" />
+          <ScalarProperty Name="VOL_PUMPED_GASOLINE_CONTROL" ColumnName="VOL_PUMPED_GASOLINE_CONTROL" />
+          <ScalarProperty Name="DIFF_DIESEL" ColumnName="DIFF_DIESEL" />
+          <ScalarProperty Name="DIFF_GASOLINE" ColumnName="DIFF_GASOLINE" />
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+          <ScalarProperty Name="PUMP_CALC_TRUE" ColumnName="PUMP_CALC_TRUE" />
+          <ScalarProperty Name="COUNT_CALC_TRUE" ColumnName="COUNT_CALC_TRUE" />
+          <ScalarProperty Name="PRINT_TRUE" ColumnName="PRINT_TRUE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="US_GASSTN_HIST_COUNT_CHECKS">
+      <EntityTypeMapping TypeName="BMDBModel.US_GASSTN_HIST_COUNT_CHECKS">
+        <MappingFragment StoreEntitySet="US_GASSTN_HIST_COUNT_CHECKS">
+          <ScalarProperty Name="STR_ID" ColumnName="STR_ID" />
+          <ScalarProperty Name="DAT" ColumnName="DAT" />
+          <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+          <ScalarProperty Name="SHIFT_NO" ColumnName="SHIFT_NO" />
+          <ScalarProperty Name="DOC_ID" ColumnName="DOC_ID" />
+          <ScalarProperty Name="CURNCY_COD" ColumnName="CURNCY_COD" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="HOME_CURNCY_AMT" ColumnName="HOME_CURNCY_AMT" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="BANK" ColumnName="BANK" />
+          <ScalarProperty Name="CHECK_NO" ColumnName="CHECK_NO" />
+          <ScalarProperty Name="RS_UTC_DT" ColumnName="RS_UTC_DT" />
+          <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="US_GASSTN_HIST_COUNT_DOLLARS">
+      <EntityTypeMapping TypeName="BMDBModel.US_GASSTN_HIST_COUNT_DOLLARS">
+        <MappingFragment StoreEntitySet="US_GASSTN_HIST_COUNT_DOLLARS">
+          <ScalarProperty Name="STR_ID" ColumnName="STR_ID" />
+          <ScalarProperty Name="DAT" ColumnName="DAT" />
+          <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+          <ScalarProperty Name="SHIFT_NO" ColumnName="SHIFT_NO" />
+          <ScalarProperty Name="DOC_ID" ColumnName="DOC_ID" />
+          <ScalarProperty Name="CURNCY_COD" ColumnName="CURNCY_COD" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+          <ScalarProperty Name="CURNCY_UNIT" ColumnName="CURNCY_UNIT" />
+          <ScalarProperty Name="UNIT_TYP" ColumnName="UNIT_TYP" />
+          <ScalarProperty Name="VAL" ColumnName="VAL" />
+          <ScalarProperty Name="COUNTED" ColumnName="COUNTED" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="HOME_CURNCY_AMT" ColumnName="HOME_CURNCY_AMT" />
+          <ScalarProperty Name="RS_UTC_DT" ColumnName="RS_UTC_DT" />
+          <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="US_GASSTN_HIST_COUNT_GUILDERS">
+      <EntityTypeMapping TypeName="BMDBModel.US_GASSTN_HIST_COUNT_GUILDERS">
+        <MappingFragment StoreEntitySet="US_GASSTN_HIST_COUNT_GUILDERS">
+          <ScalarProperty Name="STR_ID" ColumnName="STR_ID" />
+          <ScalarProperty Name="DAT" ColumnName="DAT" />
+          <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+          <ScalarProperty Name="SHIFT_NO" ColumnName="SHIFT_NO" />
+          <ScalarProperty Name="DOC_ID" ColumnName="DOC_ID" />
+          <ScalarProperty Name="CURNCY_COD" ColumnName="CURNCY_COD" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+          <ScalarProperty Name="CURNCY_UNIT" ColumnName="CURNCY_UNIT" />
+          <ScalarProperty Name="UNIT_TYP" ColumnName="UNIT_TYP" />
+          <ScalarProperty Name="VAL" ColumnName="VAL" />
+          <ScalarProperty Name="COUNTED" ColumnName="COUNTED" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="HOME_CURNCY_AMT" ColumnName="HOME_CURNCY_AMT" />
+          <ScalarProperty Name="RS_UTC_DT" ColumnName="RS_UTC_DT" />
+          <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="US_GASSTN_HIST_COUNT_STORE_CREDITS">
+      <EntityTypeMapping TypeName="BMDBModel.US_GASSTN_HIST_COUNT_STORE_CREDITS">
+        <MappingFragment StoreEntitySet="US_GASSTN_HIST_COUNT_STORE_CREDITS">
+          <ScalarProperty Name="STR_ID" ColumnName="STR_ID" />
+          <ScalarProperty Name="DAT" ColumnName="DAT" />
+          <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+          <ScalarProperty Name="SHIFT_NO" ColumnName="SHIFT_NO" />
+          <ScalarProperty Name="DOC_ID" ColumnName="DOC_ID" />
+          <ScalarProperty Name="STC_NO" ColumnName="STC_NO" />
+          <ScalarProperty Name="GFC_COD" ColumnName="GFC_COD" />
+          <ScalarProperty Name="DESCR" ColumnName="DESCR" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="VEHICLE_NO" ColumnName="VEHICLE_NO" />
+          <ScalarProperty Name="HOME_CURNCY_AMT" ColumnName="HOME_CURNCY_AMT" />
+          <ScalarProperty Name="CURR_AMT" ColumnName="CURR_AMT" />
+          <ScalarProperty Name="CUST_NO" ColumnName="CUST_NO" />
+          <ScalarProperty Name="NAM" ColumnName="NAM" />
+          <ScalarProperty Name="RS_UTC_DT" ColumnName="RS_UTC_DT" />
+          <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VOUCHERS">
+      <EntityTypeMapping TypeName="BMDBModel.VOUCHERS">
+        <MappingFragment StoreEntitySet="US_GASSTN_HIST_COUNT_VOUCHERS">
+          <ScalarProperty Name="STR_ID" ColumnName="STR_ID" />
+          <ScalarProperty Name="DAT" ColumnName="DAT" />
+          <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+          <ScalarProperty Name="SHIFT_NO" ColumnName="SHIFT_NO" />
+          <ScalarProperty Name="DOC_ID" ColumnName="DOC_ID" />
+          <ScalarProperty Name="GFC_NO" ColumnName="GFC_NO" />
+          <ScalarProperty Name="GFC_COD" ColumnName="GFC_COD" />
+          <ScalarProperty Name="DESCR" ColumnName="DESCR" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="HOME_CURNCY_AMT" ColumnName="HOME_CURNCY_AMT" />
+          <ScalarProperty Name="CUST_NO" ColumnName="CUST_NO" />
+          <ScalarProperty Name="NAM" ColumnName="NAM" />
+          <ScalarProperty Name="RS_UTC_DT" ColumnName="RS_UTC_DT" />
+          <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NOSALES">
+      <EntityTypeMapping TypeName="BMDBModel.NOSALES">
+        <MappingFragment StoreEntitySet="US_GASSTN_HIST_NO_SALES">
+          <ScalarProperty Name="STR_ID" ColumnName="STR_ID" />
+          <ScalarProperty Name="DAT" ColumnName="DAT" />
+          <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+          <ScalarProperty Name="SHIFT_NO" ColumnName="SHIFT_NO" />
+          <ScalarProperty Name="DOC_ID" ColumnName="DOC_ID" />
+          <ScalarProperty Name="VOLUME" ColumnName="VOLUME" />
+          <ScalarProperty Name="FUEL_COD" ColumnName="FUEL_COD" />
+          <ScalarProperty Name="DOC_NO" ColumnName="DOC_NO" />
+          <ScalarProperty Name="VEHICLE_NO" ColumnName="VEHICLE_NO" />
+          <ScalarProperty Name="EXP_ACCOUNT" ColumnName="EXP_ACCOUNT" />
+          <ScalarProperty Name="PROFIT_CENTER" ColumnName="PROFIT_CENTER" />
+          <ScalarProperty Name="INV_ADJUSTMENT" ColumnName="INV_ADJUSTMENT" />
+          <ScalarProperty Name="RS_UTC_DT" ColumnName="RS_UTC_DT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="US_GASSTN_HIST_PUMPS">
+      <EntityTypeMapping TypeName="BMDBModel.US_GASSTN_HIST_PUMPS">
+        <MappingFragment StoreEntitySet="US_GASSTN_HIST_PUMPS">
+          <ScalarProperty Name="STR_ID" ColumnName="STR_ID" />
+          <ScalarProperty Name="DAT" ColumnName="DAT" />
+          <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+          <ScalarProperty Name="DOC_ID" ColumnName="DOC_ID" />
+          <ScalarProperty Name="SHIFT_NO" ColumnName="SHIFT_NO" />
+          <ScalarProperty Name="PUMP_NO" ColumnName="PUMP_NO" />
+          <ScalarProperty Name="FUEL_COD" ColumnName="FUEL_COD" />
+          <ScalarProperty Name="SHIFT_NO_DESCR" ColumnName="SHIFT_NO_DESCR" />
+          <ScalarProperty Name="PUMP_READ_CLOSE_PREV" ColumnName="PUMP_READ_CLOSE_PREV" />
+          <ScalarProperty Name="HAS_ACTIVITY" ColumnName="HAS_ACTIVITY" />
+          <ScalarProperty Name="PUMP_READ_OPEN" ColumnName="PUMP_READ_OPEN" />
+          <ScalarProperty Name="PUMP_READ_CLOSE" ColumnName="PUMP_READ_CLOSE" />
+          <ScalarProperty Name="FUEL_VOL_PUMPED" ColumnName="FUEL_VOL_PUMPED" />
+          <ScalarProperty Name="DIFF_ON_OPEN" ColumnName="DIFF_ON_OPEN" />
+          <ScalarProperty Name="RS_UTC_DT" ColumnName="RS_UTC_DT" />
+          <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="US_GASSTN_HIST_SHIFTS">
+      <EntityTypeMapping TypeName="BMDBModel.US_GASSTN_HIST_SHIFTS">
+        <MappingFragment StoreEntitySet="US_GASSTN_HIST_SHIFTS">
+          <ScalarProperty Name="STR_ID" ColumnName="STR_ID" />
+          <ScalarProperty Name="DAT" ColumnName="DAT" />
+          <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+          <ScalarProperty Name="SHIFT_NO" ColumnName="SHIFT_NO" />
+          <ScalarProperty Name="DOC_ID" ColumnName="DOC_ID" />
+          <ScalarProperty Name="SHIFT_NO_DESCR" ColumnName="SHIFT_NO_DESCR" />
+          <ScalarProperty Name="ATTENDANT_ID" ColumnName="ATTENDANT_ID" />
+          <ScalarProperty Name="CASH_DOLLARS_AMT" ColumnName="CASH_DOLLARS_AMT" />
+          <ScalarProperty Name="CASH_DOLLARS_HOME_CURNCY_AMT" ColumnName="CASH_DOLLARS_HOME_CURNCY_AMT" />
+          <ScalarProperty Name="CASH_GUILDERS_AMT" ColumnName="CASH_GUILDERS_AMT" />
+          <ScalarProperty Name="CASH_GUILDERS_HOME_CURNCY_AMT" ColumnName="CASH_GUILDERS_HOME_CURNCY_AMT" />
+          <ScalarProperty Name="CHECK_DOLLARS_AMT" ColumnName="CHECK_DOLLARS_AMT" />
+          <ScalarProperty Name="CHECK_DOLLARS_HOME_CURNCY_AMT" ColumnName="CHECK_DOLLARS_HOME_CURNCY_AMT" />
+          <ScalarProperty Name="CHECK_GUILDERS_AMT" ColumnName="CHECK_GUILDERS_AMT" />
+          <ScalarProperty Name="CHECK_GUILDERS_HOME_CURNCY_AMT" ColumnName="CHECK_GUILDERS_HOME_CURNCY_AMT" />
+          <ScalarProperty Name="STORE_CREDITS_AMT" ColumnName="STORE_CREDITS_AMT" />
+          <ScalarProperty Name="STORE_CREDITS_HOME_CURNCY_AMT" ColumnName="STORE_CREDITS_HOME_CURNCY_AMT" />
+          <ScalarProperty Name="VOUCHERS_AMT" ColumnName="VOUCHERS_AMT" />
+          <ScalarProperty Name="VOUCHERS_HOME_CURNCY_AMT" ColumnName="VOUCHERS_HOME_CURNCY_AMT" />
+          <ScalarProperty Name="TOTAL_GUILDERS_AMT" ColumnName="TOTAL_GUILDERS_AMT" />
+          <ScalarProperty Name="TOTAL_DOLLARS_AMT" ColumnName="TOTAL_DOLLARS_AMT" />
+          <ScalarProperty Name="TOTAL_HOME_CURNCY_AMT" ColumnName="TOTAL_HOME_CURNCY_AMT" />
+          <ScalarProperty Name="DIESEL_VOL_PUMPED" ColumnName="DIESEL_VOL_PUMPED" />
+          <ScalarProperty Name="GASOLINE_VOL_PUMPED" ColumnName="GASOLINE_VOL_PUMPED" />
+          <ScalarProperty Name="DIESEL_VOL_NO_SALES" ColumnName="DIESEL_VOL_NO_SALES" />
+          <ScalarProperty Name="GASOLINE_VOL_NO_SALES" ColumnName="GASOLINE_VOL_NO_SALES" />
+          <ScalarProperty Name="DIESEL_VOL_SOLD" ColumnName="DIESEL_VOL_SOLD" />
+          <ScalarProperty Name="GASOLINE_VOL_SOLD" ColumnName="GASOLINE_VOL_SOLD" />
+          <ScalarProperty Name="ITEM_NO_DIESEL" ColumnName="ITEM_NO_DIESEL" />
+          <ScalarProperty Name="PRICE_LOW_DIESEL" ColumnName="PRICE_LOW_DIESEL" />
+          <ScalarProperty Name="VOL_SOLD_LOW_DIESEL" ColumnName="VOL_SOLD_LOW_DIESEL" />
+          <ScalarProperty Name="AMT_SOLD_LOW_DIESEL" ColumnName="AMT_SOLD_LOW_DIESEL" />
+          <ScalarProperty Name="PRICE_HIGH_DIESEL" ColumnName="PRICE_HIGH_DIESEL" />
+          <ScalarProperty Name="VOL_SOLD_HIGH_DIESEL" ColumnName="VOL_SOLD_HIGH_DIESEL" />
+          <ScalarProperty Name="AMT_SOLD_HIGH_DIESEL" ColumnName="AMT_SOLD_HIGH_DIESEL" />
+          <ScalarProperty Name="UNIT_COST_DIESEL" ColumnName="UNIT_COST_DIESEL" />
+          <ScalarProperty Name="ITEM_NO_GASOLINE" ColumnName="ITEM_NO_GASOLINE" />
+          <ScalarProperty Name="PRICE_LOW_GASOLINE" ColumnName="PRICE_LOW_GASOLINE" />
+          <ScalarProperty Name="VOL_SOLD_LOW_GASOLINE" ColumnName="VOL_SOLD_LOW_GASOLINE" />
+          <ScalarProperty Name="AMT_SOLD_LOW_GASOLINE" ColumnName="AMT_SOLD_LOW_GASOLINE" />
+          <ScalarProperty Name="PRICE_HIGH_GASOLINE" ColumnName="PRICE_HIGH_GASOLINE" />
+          <ScalarProperty Name="VOL_SOLD_HIGH_GASOLINE" ColumnName="VOL_SOLD_HIGH_GASOLINE" />
+          <ScalarProperty Name="AMT_SOLD_HIGH_GASOLINE" ColumnName="AMT_SOLD_HIGH_GASOLINE" />
+          <ScalarProperty Name="UNIT_COST_GASOLINE" ColumnName="UNIT_COST_GASOLINE" />
+          <ScalarProperty Name="AMT_SALES_DIESEL" ColumnName="AMT_SALES_DIESEL" />
+          <ScalarProperty Name="AMT_SALES_GASOLINE" ColumnName="AMT_SALES_GASOLINE" />
+          <ScalarProperty Name="AMT_SALES_TOTAL" ColumnName="AMT_SALES_TOTAL" />
+          <ScalarProperty Name="EXT_COST_TOTAL" ColumnName="EXT_COST_TOTAL" />
+          <ScalarProperty Name="SHORT_OVER" ColumnName="SHORT_OVER" />
+          <ScalarProperty Name="DRW_ID" ColumnName="DRW_ID" />
+          <ScalarProperty Name="DRW_SESSION_ID" ColumnName="DRW_SESSION_ID" />
+          <ScalarProperty Name="TKT_NO" ColumnName="TKT_NO" />
+          <ScalarProperty Name="RS_UTC_DT" ColumnName="RS_UTC_DT" />
+          <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="US_GASSTN_SY_PUMPS">
+      <EntityTypeMapping TypeName="BMDBModel.US_GASSTN_SY_PUMPS">
+        <MappingFragment StoreEntitySet="US_GASSTN_SY_PUMPS">
+          <ScalarProperty Name="STR_ID" ColumnName="STR_ID" />
+          <ScalarProperty Name="PUMP_NO" ColumnName="PUMP_NO" />
+          <ScalarProperty Name="IS_FULL_SERVICE" ColumnName="IS_FULL_SERVICE" />
+          <ScalarProperty Name="RS_UTC_DT" ColumnName="RS_UTC_DT" />
+          <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="US_GASSTN_SY_SHIFTS">
+      <EntityTypeMapping TypeName="BMDBModel.US_GASSTN_SY_SHIFTS">
+        <MappingFragment StoreEntitySet="US_GASSTN_SY_SHIFTS">
+          <ScalarProperty Name="STR_ID" ColumnName="STR_ID" />
+          <ScalarProperty Name="SHIFT_NO" ColumnName="SHIFT_NO" />
+          <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+          <ScalarProperty Name="DESCR" ColumnName="DESCR" />
+          <ScalarProperty Name="IS_FULL_SERVICE" ColumnName="IS_FULL_SERVICE" />
+          <ScalarProperty Name="IS_ACTIVE" ColumnName="IS_ACTIVE" />
+          <ScalarProperty Name="RS_UTC_DT" ColumnName="RS_UTC_DT" />
+          <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="US_VI_GASSTN_DOC_BANK_DEPOSITS">
+      <EntityTypeMapping TypeName="BMDBModel.US_VI_GASSTN_DOC_BANK_DEPOSITS">
+        <MappingFragment StoreEntitySet="US_VI_GASSTN_DOC_BANK_DEPOSITS">
+          <ScalarProperty Name="STR_ID" ColumnName="STR_ID" />
+          <ScalarProperty Name="DAT" ColumnName="DAT" />
+          <ScalarProperty Name="SHIFT_NO" ColumnName="SHIFT_NO" />
+          <ScalarProperty Name="CURNCY_COD" ColumnName="CURNCY_COD" />
+          <ScalarProperty Name="BANK_ACCT" ColumnName="BANK_ACCT" />
+          <ScalarProperty Name="CURNCY_DESCR" ColumnName="CURNCY_DESCR" />
+          <ScalarProperty Name="UNIT_250_COUNT" ColumnName="UNIT_250_COUNT" />
+          <ScalarProperty Name="UNIT_250_AMOUNT" ColumnName="UNIT_250_AMOUNT" />
+          <ScalarProperty Name="UNIT_100_COUNT" ColumnName="UNIT_100_COUNT" />
+          <ScalarProperty Name="UNIT_100_AMOUNT" ColumnName="UNIT_100_AMOUNT" />
+          <ScalarProperty Name="UNIT_50_COUNT" ColumnName="UNIT_50_COUNT" />
+          <ScalarProperty Name="UNIT_50_AMOUNT" ColumnName="UNIT_50_AMOUNT" />
+          <ScalarProperty Name="UNIT_25_20_COUNT" ColumnName="UNIT_25_20_COUNT" />
+          <ScalarProperty Name="UNIT_25_20_AMOUNT" ColumnName="UNIT_25_20_AMOUNT" />
+          <ScalarProperty Name="UNIT_10_COUNT" ColumnName="UNIT_10_COUNT" />
+          <ScalarProperty Name="UNIT_10_AMOUNT" ColumnName="UNIT_10_AMOUNT" />
+          <ScalarProperty Name="UNIT_5_COUNT" ColumnName="UNIT_5_COUNT" />
+          <ScalarProperty Name="UNIT_5_AMOUNT" ColumnName="UNIT_5_AMOUNT" />
+          <ScalarProperty Name="UNIT_1_COUNT" ColumnName="UNIT_1_COUNT" />
+          <ScalarProperty Name="COINS_AMOUNT" ColumnName="COINS_AMOUNT" />
+          <ScalarProperty Name="UNIT_1_AMOUNT" ColumnName="UNIT_1_AMOUNT" />
+          <ScalarProperty Name="CASH_TOTAL" ColumnName="CASH_TOTAL" />
+          <ScalarProperty Name="CHECKS_COUNT" ColumnName="CHECKS_COUNT" />
+          <ScalarProperty Name="CHECKS_AMOUNT" ColumnName="CHECKS_AMOUNT" />
+          <ScalarProperty Name="GRAND_TOTAL" ColumnName="GRAND_TOTAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOC_BATCH">
+      <EntityTypeMapping TypeName="BMDBModel.DOC_BATCH">
+        <MappingFragment StoreEntitySet="US_VI_GASSTN_DOC_BATCH">
+          <ScalarProperty Name="STR_ID" ColumnName="STR_ID" />
+          <ScalarProperty Name="DAT" ColumnName="DAT" />
+          <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SHIFTS">
+      <EntityTypeMapping TypeName="BMDBModel.SHIFTS">
+        <MappingFragment StoreEntitySet="US_VI_GASSTN_DOC_SHIFTS">
+          <ScalarProperty Name="STR_ID" ColumnName="STR_ID" />
+          <ScalarProperty Name="DAT" ColumnName="DAT" />
+          <ScalarProperty Name="SHIFT_NO" ColumnName="SHIFT_NO" />
+          <ScalarProperty Name="SHIFT_NO_DESCR" ColumnName="SHIFT_NO_DESCR" />
+          <ScalarProperty Name="ATTENDANT_ID" ColumnName="ATTENDANT_ID" />
+          <ScalarProperty Name="CASH_DOLLARS_AMT" ColumnName="CASH_DOLLARS_AMT" />
+          <ScalarProperty Name="CASH_DOLLARS_HOME_CURNCY_AMT" ColumnName="CASH_DOLLARS_HOME_CURNCY_AMT" />
+          <ScalarProperty Name="CASH_GUILDERS_AMT" ColumnName="CASH_GUILDERS_AMT" />
+          <ScalarProperty Name="CASH_GUILDERS_HOME_CURNCY_AMT" ColumnName="CASH_GUILDERS_HOME_CURNCY_AMT" />
+          <ScalarProperty Name="CHECK_DOLLARS_AMT" ColumnName="CHECK_DOLLARS_AMT" />
+          <ScalarProperty Name="CHECK_DOLLARS_HOME_CURNCY_AMT" ColumnName="CHECK_DOLLARS_HOME_CURNCY_AMT" />
+          <ScalarProperty Name="CHECK_GUILDERS_AMT" ColumnName="CHECK_GUILDERS_AMT" />
+          <ScalarProperty Name="CHECK_GUILDERS_HOME_CURNCY_AMT" ColumnName="CHECK_GUILDERS_HOME_CURNCY_AMT" />
+          <ScalarProperty Name="VOUCHERS_AMT" ColumnName="VOUCHERS_AMT" />
+          <ScalarProperty Name="VOUCHERS_HOME_CURNCY_AMT" ColumnName="VOUCHERS_HOME_CURNCY_AMT" />
+          <ScalarProperty Name="DIESEL_VOL_SOLD" ColumnName="DIESEL_VOL_SOLD" />
+          <ScalarProperty Name="GASOLINE_VOL_SOLD" ColumnName="GASOLINE_VOL_SOLD" />
+          <ScalarProperty Name="TOTAL_GUILDERS_AMT" ColumnName="TOTAL_GUILDERS_AMT" />
+          <ScalarProperty Name="TOTAL_DOLLARS_AMT" ColumnName="TOTAL_DOLLARS_AMT" />
+          <ScalarProperty Name="TOTAL_HOME_CURNCY_AMT" ColumnName="TOTAL_HOME_CURNCY_AMT" />
+          <ScalarProperty Name="ITEM_NO_DIESEL" ColumnName="ITEM_NO_DIESEL" />
+          <ScalarProperty Name="PRICE_LOW_DIESEL" ColumnName="PRICE_LOW_DIESEL" />
+          <ScalarProperty Name="VOL_SOLD_LOW_DIESEL" ColumnName="VOL_SOLD_LOW_DIESEL" />
+          <ScalarProperty Name="AMT_SOLD_LOW_DIESEL" ColumnName="AMT_SOLD_LOW_DIESEL" />
+          <ScalarProperty Name="PRICE_HIGH_DIESEL" ColumnName="PRICE_HIGH_DIESEL" />
+          <ScalarProperty Name="VOL_SOLD_HIGH_DIESEL" ColumnName="VOL_SOLD_HIGH_DIESEL" />
+          <ScalarProperty Name="AMT_SOLD_HIGH_DIESEL" ColumnName="AMT_SOLD_HIGH_DIESEL" />
+          <ScalarProperty Name="ITEM_NO_GASOLINE" ColumnName="ITEM_NO_GASOLINE" />
+          <ScalarProperty Name="PRICE_LOW_GASOLINE" ColumnName="PRICE_LOW_GASOLINE" />
+          <ScalarProperty Name="VOL_SOLD_LOW_GASOLINE" ColumnName="VOL_SOLD_LOW_GASOLINE" />
+          <ScalarProperty Name="AMT_SOLD_LOW_GASOLINE" ColumnName="AMT_SOLD_LOW_GASOLINE" />
+          <ScalarProperty Name="PRICE_HIGH_GASOLINE" ColumnName="PRICE_HIGH_GASOLINE" />
+          <ScalarProperty Name="VOL_SOLD_HIGH_GASOLINE" ColumnName="VOL_SOLD_HIGH_GASOLINE" />
+          <ScalarProperty Name="AMT_SOLD_HIGH_GASOLINE" ColumnName="AMT_SOLD_HIGH_GASOLINE" />
+          <ScalarProperty Name="AMT_SALES_DIESEL" ColumnName="AMT_SALES_DIESEL" />
+          <ScalarProperty Name="AMT_SALES_GASOLINE" ColumnName="AMT_SALES_GASOLINE" />
+          <ScalarProperty Name="AMT_SALES_TOTAL" ColumnName="AMT_SALES_TOTAL" />
+          <ScalarProperty Name="SHORT_OVER" ColumnName="SHORT_OVER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="US_VI_GASSTN_STORE_CREDITS_AVAIL">
+      <EntityTypeMapping TypeName="BMDBModel.US_VI_GASSTN_STORE_CREDITS_AVAIL">
+        <MappingFragment StoreEntitySet="US_VI_GASSTN_STORE_CREDITS_AVAIL">
+          <ScalarProperty Name="DAT" ColumnName="DAT" />
+          <ScalarProperty Name="STC_NO" ColumnName="STC_NO" />
+          <ScalarProperty Name="AMTISSUED" ColumnName="AMTISSUED" />
+          <ScalarProperty Name="AMTAVAIL" ColumnName="AMTAVAIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VI_SY_USR_WITH_ADDRESS">
+      <EntityTypeMapping TypeName="BMDBModel.VI_SY_USR_WITH_ADDRESS">
+        <MappingFragment StoreEntitySet="VI_SY_USR_WITH_ADDRESS">
+          <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+          <ScalarProperty Name="NAM" ColumnName="NAM" />
+          <ScalarProperty Name="NAM_UPR" ColumnName="NAM_UPR" />
+          <ScalarProperty Name="INITIALS" ColumnName="INITIALS" />
+          <ScalarProperty Name="PWD" ColumnName="PWD" />
+          <ScalarProperty Name="ADRS_1" ColumnName="ADRS_1" />
+          <ScalarProperty Name="ADRS_2" ColumnName="ADRS_2" />
+          <ScalarProperty Name="ADRS_3" ColumnName="ADRS_3" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="ZIP_COD" ColumnName="ZIP_COD" />
+          <ScalarProperty Name="CNTRY" ColumnName="CNTRY" />
+          <ScalarProperty Name="CONTCT_1" ColumnName="CONTCT_1" />
+          <ScalarProperty Name="CONTCT_2" ColumnName="CONTCT_2" />
+          <ScalarProperty Name="PHONE_1" ColumnName="PHONE_1" />
+          <ScalarProperty Name="PHONE_2" ColumnName="PHONE_2" />
+          <ScalarProperty Name="FAX_1" ColumnName="FAX_1" />
+          <ScalarProperty Name="FAX_2" ColumnName="FAX_2" />
+          <ScalarProperty Name="EMAIL_ADRS_1" ColumnName="EMAIL_ADRS_1" />
+          <ScalarProperty Name="EMAIL_ADRS_2" ColumnName="EMAIL_ADRS_2" />
+          <ScalarProperty Name="URL_1" ColumnName="URL_1" />
+          <ScalarProperty Name="URL_2" ColumnName="URL_2" />
+          <ScalarProperty Name="WRKGRP_ID" ColumnName="WRKGRP_ID" />
+          <ScalarProperty Name="ALLOW_OTHR_WRKGRPS" ColumnName="ALLOW_OTHR_WRKGRPS" />
+          <ScalarProperty Name="DEPT" ColumnName="DEPT" />
+          <ScalarProperty Name="EMP_NO" ColumnName="EMP_NO" />
+          <ScalarProperty Name="SEC_COD" ColumnName="SEC_COD" />
+          <ScalarProperty Name="IS_PS_USR" ColumnName="IS_PS_USR" />
+          <ScalarProperty Name="IS_PS_MGR" ColumnName="IS_PS_MGR" />
+          <ScalarProperty Name="PS_SEC_COD" ColumnName="PS_SEC_COD" />
+          <ScalarProperty Name="IS_SLS_REP" ColumnName="IS_SLS_REP" />
+          <ScalarProperty Name="IS_BUYER" ColumnName="IS_BUYER" />
+          <ScalarProperty Name="LOGIN_DISABLED" ColumnName="LOGIN_DISABLED" />
+          <ScalarProperty Name="CHNG_PWD_NXT_LOGIN" ColumnName="CHNG_PWD_NXT_LOGIN" />
+          <ScalarProperty Name="LST_PWD_CHNG_DAT" ColumnName="LST_PWD_CHNG_DAT" />
+          <ScalarProperty Name="LST_LOGIN_DT" ColumnName="LST_LOGIN_DT" />
+          <ScalarProperty Name="LST_STR_ID" ColumnName="LST_STR_ID" />
+          <ScalarProperty Name="LST_STA_ID" ColumnName="LST_STA_ID" />
+          <ScalarProperty Name="LST_DRW_ID" ColumnName="LST_DRW_ID" />
+          <ScalarProperty Name="COMMIS_COD" ColumnName="COMMIS_COD" />
+          <ScalarProperty Name="LST_WRKGRP_ID" ColumnName="LST_WRKGRP_ID" />
+          <ScalarProperty Name="LOGIN_FAIL_CNT" ColumnName="LOGIN_FAIL_CNT" />
+          <ScalarProperty Name="PREV_PWD_1" ColumnName="PREV_PWD_1" />
+          <ScalarProperty Name="PREV_PWD_2" ColumnName="PREV_PWD_2" />
+          <ScalarProperty Name="PREV_PWD_3" ColumnName="PREV_PWD_3" />
+          <ScalarProperty Name="LST_CLCK_IN_DT" ColumnName="LST_CLCK_IN_DT" />
+          <ScalarProperty Name="LST_CLCK_OUT_DT" ColumnName="LST_CLCK_OUT_DT" />
+          <ScalarProperty Name="BIO_ID_DATA" ColumnName="BIO_ID_DATA" />
+          <ScalarProperty Name="IS_OE_USR" ColumnName="IS_OE_USR" />
+          <ScalarProperty Name="IS_OE_MGR" ColumnName="IS_OE_MGR" />
+          <ScalarProperty Name="OE_SEC_COD" ColumnName="OE_SEC_COD" />
+          <ScalarProperty Name="LST_LOGIN_WKSTN_NAM" ColumnName="LST_LOGIN_WKSTN_NAM" />
+          <ScalarProperty Name="LST_TE_LOGIN_DT" ColumnName="LST_TE_LOGIN_DT" />
+          <ScalarProperty Name="LST_TE_WRKGRP_ID" ColumnName="LST_TE_WRKGRP_ID" />
+          <ScalarProperty Name="LST_TE_LOGIN_WKSTN_NAM" ColumnName="LST_TE_LOGIN_WKSTN_NAM" />
+          <ScalarProperty Name="COPY_FRM_USR_ID" ColumnName="COPY_FRM_USR_ID" />
+          <ScalarProperty Name="RS_UTC_DT" ColumnName="RS_UTC_DT" />
+          <ScalarProperty Name="LST_MAINT_DT" ColumnName="LST_MAINT_DT" />
+          <ScalarProperty Name="LST_MAINT_USR_ID" ColumnName="LST_MAINT_USR_ID" />
+          <ScalarProperty Name="LST_LCK_DT" ColumnName="LST_LCK_DT" />
+          <ScalarProperty Name="ROW_TS" ColumnName="ROW_TS" />
+          <ScalarProperty Name="CITY_STATE_ZIP_CNTRY" ColumnName="CITY_STATE_ZIP_CNTRY" />
+          <ScalarProperty Name="ADRS_MSK" ColumnName="ADRS_MSK" />
+          <ScalarProperty Name="LBL_NUMBER" ColumnName="LBL_NUMBER" />
+          <ScalarProperty Name="LBL_NAME" ColumnName="LBL_NAME" />
+          <ScalarProperty Name="LBL_ADDRESS_1" ColumnName="LBL_ADDRESS_1" />
+          <ScalarProperty Name="LBL_ADDRESS_2" ColumnName="LBL_ADDRESS_2" />
+          <ScalarProperty Name="LBL_ADDRESS_3" ColumnName="LBL_ADDRESS_3" />
+          <ScalarProperty Name="LBL_ADDRESS_4" ColumnName="LBL_ADDRESS_4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_CALC_COUNT" FunctionName="BMDBModel.Store.USER_SP_GASSTN_CALC_COUNT" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_CALC_COUNT_OLD" FunctionName="BMDBModel.Store.USER_SP_GASSTN_CALC_COUNT_OLD" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_CALC_DEPOSITS" FunctionName="BMDBModel.Store.USER_SP_GASSTN_CALC_DEPOSITS" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_CALC_PUMPS" FunctionName="BMDBModel.Store.USER_SP_GASSTN_CALC_PUMPS" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_COPY_TO_US_GASSTN_HIST" FunctionName="BMDBModel.Store.USER_SP_GASSTN_COPY_TO_US_GASSTN_HIST" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_COPY_TO_US_GASSTN_HIST_DELIVERIES" FunctionName="BMDBModel.Store.USER_SP_GASSTN_COPY_TO_US_GASSTN_HIST_DELIVERIES" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_COPY_TO_US_MARINA_DOC_BANK_DEPOSITS" FunctionName="BMDBModel.Store.USER_SP_GASSTN_COPY_TO_US_MARINA_DOC_BANK_DEPOSITS" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_CREATE_BATCH" FunctionName="BMDBModel.Store.USER_SP_GASSTN_CREATE_BATCH" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_DELETE_DOCS" FunctionName="BMDBModel.Store.USER_SP_GASSTN_DELETE_DOCS" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_DROP_POST_BATCH_AUDIT_TABLE" FunctionName="BMDBModel.Store.USER_SP_GASSTN_DROP_POST_BATCH_AUDIT_TABLE" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_INSERT_FUEL_QTY_AVAIL" FunctionName="BMDBModel.Store.USER_SP_GASSTN_INSERT_FUEL_QTY_AVAIL" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_POST_BATCH" FunctionName="BMDBModel.Store.USER_SP_GASSTN_POST_BATCH" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_POST_BATCH_RECOVERY" FunctionName="BMDBModel.Store.USER_SP_GASSTN_POST_BATCH_RECOVERY" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_PRINT_BATCH_EDIT_LIST" FunctionName="BMDBModel.Store.USER_SP_GASSTN_PRINT_BATCH_EDIT_LIST" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_PRINT_DEPOSIT_DOLLARS" FunctionName="BMDBModel.Store.USER_SP_GASSTN_PRINT_DEPOSIT_DOLLARS" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_PRINT_DEPOSIT_GUILDERS" FunctionName="BMDBModel.Store.USER_SP_GASSTN_PRINT_DEPOSIT_GUILDERS" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_PRINT_FUEL_SALES" FunctionName="BMDBModel.Store.USER_SP_GASSTN_PRINT_FUEL_SALES" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_PRINT_STORE_CREDITS_STATEMENT" FunctionName="BMDBModel.Store.USER_SP_GASSTN_PRINT_STORE_CREDITS_STATEMENT" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_RPT_ATTENDANT_SHORT_OVER_MONTH" FunctionName="BMDBModel.Store.USER_SP_GASSTN_RPT_ATTENDANT_SHORT_OVER_MONTH" />
+    <FunctionImportMapping FunctionImportName="USER_SP_GASSTN_RPT_FUEL_SALES_12_MONTHS" FunctionName="BMDBModel.Store.USER_SP_GASSTN_RPT_FUEL_SALES_12_MONTHS" />
+  </EntityContainerMapping>
+</Mapping>

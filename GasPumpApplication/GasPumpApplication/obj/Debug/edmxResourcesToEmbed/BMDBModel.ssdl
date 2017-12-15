@@ -1,0 +1,888 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BMDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SY_CURNCY_COD">
+    <Key>
+      <PropertyRef Name="CURNCY_COD" />
+    </Key>
+    <Property Name="CURNCY_COD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DESCR" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="DESCR_UPR" Type="varchar" MaxLength="30" />
+    <Property Name="EXCH_RATE_NUMER" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="EXCH_RATE_DENOM" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="EXCH_RATE" Type="float" StoreGeneratedPattern="Computed" />
+    <Property Name="GAIN_LOSS_METH" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="GAIN_LOSS_ACCT_NO" Type="varchar" MaxLength="20" />
+    <Property Name="RS_UTC_DT" Type="datetime" />
+    <Property Name="LST_MAINT_DT" Type="datetime" />
+    <Property Name="LST_MAINT_USR_ID" Type="varchar" MaxLength="10" />
+    <Property Name="LST_LCK_DT" Type="datetime" />
+    <Property Name="ROW_TS" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="SY_CURNCY_UNITS">
+    <Key>
+      <PropertyRef Name="CURNCY_COD" />
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="CURNCY_COD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SEQ_NO" Type="int" Nullable="false" />
+    <Property Name="CURNCY_UNIT" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UNIT_TYP" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="VAL" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+    <Property Name="LST_MAINT_DT" Type="datetime" />
+    <Property Name="LST_MAINT_USR_ID" Type="varchar" MaxLength="10" />
+    <Property Name="LST_LCK_DT" Type="datetime" />
+    <Property Name="ROW_TS" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="SY_USR">
+    <Key>
+      <PropertyRef Name="USR_ID" />
+    </Key>
+    <Property Name="USR_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="NAM" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="NAM_UPR" Type="varchar" MaxLength="40" />
+    <Property Name="INITIALS" Type="varchar" MaxLength="5" />
+    <Property Name="PWD" Type="varchar" MaxLength="15" />
+    <Property Name="ADRS_1" Type="varchar" MaxLength="40" />
+    <Property Name="ADRS_2" Type="varchar" MaxLength="40" />
+    <Property Name="ADRS_3" Type="varchar" MaxLength="40" />
+    <Property Name="CITY" Type="varchar" MaxLength="20" />
+    <Property Name="STATE" Type="varchar" MaxLength="10" />
+    <Property Name="ZIP_COD" Type="varchar" MaxLength="15" />
+    <Property Name="CNTRY" Type="varchar" MaxLength="20" />
+    <Property Name="CONTCT_1" Type="varchar" MaxLength="40" />
+    <Property Name="CONTCT_2" Type="varchar" MaxLength="40" />
+    <Property Name="PHONE_1" Type="varchar" MaxLength="25" />
+    <Property Name="PHONE_2" Type="varchar" MaxLength="25" />
+    <Property Name="FAX_1" Type="varchar" MaxLength="25" />
+    <Property Name="FAX_2" Type="varchar" MaxLength="25" />
+    <Property Name="EMAIL_ADRS_1" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL_ADRS_2" Type="varchar" MaxLength="50" />
+    <Property Name="URL_1" Type="varchar" MaxLength="100" />
+    <Property Name="URL_2" Type="varchar" MaxLength="100" />
+    <Property Name="WRKGRP_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ALLOW_OTHR_WRKGRPS" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="DEPT" Type="varchar" MaxLength="10" />
+    <Property Name="EMP_NO" Type="varchar" MaxLength="15" />
+    <Property Name="SEC_COD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="IS_PS_USR" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="IS_PS_MGR" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="PS_SEC_COD" Type="varchar" MaxLength="10" />
+    <Property Name="IS_SLS_REP" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="IS_BUYER" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="LOGIN_DISABLED" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="CHNG_PWD_NXT_LOGIN" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="LST_PWD_CHNG_DAT" Type="datetime" />
+    <Property Name="LST_LOGIN_DT" Type="datetime" />
+    <Property Name="LST_STR_ID" Type="varchar" MaxLength="10" />
+    <Property Name="LST_STA_ID" Type="varchar" MaxLength="10" />
+    <Property Name="LST_DRW_ID" Type="varchar" MaxLength="10" />
+    <Property Name="COMMIS_COD" Type="varchar" MaxLength="10" />
+    <Property Name="LST_WRKGRP_ID" Type="varchar" MaxLength="10" />
+    <Property Name="LOGIN_FAIL_CNT" Type="int" Nullable="false" />
+    <Property Name="PREV_PWD_1" Type="varchar" MaxLength="15" />
+    <Property Name="PREV_PWD_2" Type="varchar" MaxLength="15" />
+    <Property Name="PREV_PWD_3" Type="varchar" MaxLength="15" />
+    <Property Name="LST_CLCK_IN_DT" Type="datetime" />
+    <Property Name="LST_CLCK_OUT_DT" Type="datetime" />
+    <Property Name="BIO_ID_DATA" Type="image" />
+    <Property Name="IS_OE_USR" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="IS_OE_MGR" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="OE_SEC_COD" Type="varchar" MaxLength="10" />
+    <Property Name="LST_LOGIN_WKSTN_NAM" Type="varchar" MaxLength="128" />
+    <Property Name="LST_TE_LOGIN_DT" Type="datetime" />
+    <Property Name="LST_TE_WRKGRP_ID" Type="varchar" MaxLength="10" />
+    <Property Name="LST_TE_LOGIN_WKSTN_NAM" Type="varchar" MaxLength="128" />
+    <Property Name="COPY_FRM_USR_ID" Type="varchar" MaxLength="10" />
+    <Property Name="RS_UTC_DT" Type="datetime" />
+    <Property Name="LST_MAINT_DT" Type="datetime" />
+    <Property Name="LST_MAINT_USR_ID" Type="varchar" MaxLength="10" />
+    <Property Name="LST_LCK_DT" Type="datetime" />
+    <Property Name="ROW_TS" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="US_GASSTN_CTL">
+    <Key>
+      <PropertyRef Name="DOC_ID" />
+    </Key>
+    <Property Name="DOC_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GASSTN_STORE_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GASSTN_STATION_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GASSTN_CUST_NO" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="GASSTN_DRW_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GASSTN_FRM_GRP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GASSTN_FRM" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DOCK_STORE_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DOCK_STATION_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DIESEL_COD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DIESEL_ITEM_NO" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="DIESEL_PRICE_IN_NAF" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="DIESEL_PRICE_DOCK_IN_USD" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="DIESEL_COST_DOCK_IN_USD" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="GASOLINE_COD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GASOLINE_ITEM_NO" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="GASOLINE_PRICE_IN_NAF" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="EXCH_RATE_FULL_SERV" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="EXCH_RATE" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="SLS_REP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SLS_ACCT_NO" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="TAX_AUTH_COD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TAX_RUL_COD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PAY_COD_CASH_DOLLARS" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PAY_COD_CASH_GUILDERS" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PAY_COD_CHECK_DOLLARS" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PAY_COD_CHECK_GUILDERS" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PAY_COD_VOUCHERS" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PAY_COD_STORECREDITS" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="BANK_ACCT_DOLLARS" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="BANK_ACCT_GUILDERS" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="CUT_OFF_TIME" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="US_GASSTN_HIST_BATCH">
+    <Key>
+      <PropertyRef Name="STR_ID" />
+      <PropertyRef Name="DAT" />
+      <PropertyRef Name="GROUP_ID" />
+    </Key>
+    <Property Name="STR_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DAT" Type="datetime" Nullable="false" />
+    <Property Name="GROUP_ID" Type="int" Nullable="false" />
+    <Property Name="DESCR" Type="varchar" MaxLength="30" />
+    <Property Name="DOC_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VOL_PUMPED_DIESEL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="VOL_PUMPED_GASOLINE" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="VOL_PUMPED_DIESEL_CONTROL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="VOL_PUMPED_GASOLINE_CONTROL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="DIFF_DIESEL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="DIFF_GASOLINE" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="NOTE" Type="text" />
+    <Property Name="PUMP_CALC_TRUE" Type="varchar" MaxLength="1" />
+    <Property Name="COUNT_CALC_TRUE" Type="varchar" MaxLength="1" />
+    <Property Name="PRINT_TRUE" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="US_GASSTN_HIST_COUNT_CHECKS">
+    <Key>
+      <PropertyRef Name="STR_ID" />
+      <PropertyRef Name="DAT" />
+      <PropertyRef Name="GROUP_ID" />
+      <PropertyRef Name="SHIFT_NO" />
+      <PropertyRef Name="DOC_ID" />
+    </Key>
+    <Property Name="STR_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DAT" Type="datetime" Nullable="false" />
+    <Property Name="GROUP_ID" Type="int" Nullable="false" />
+    <Property Name="SHIFT_NO" Type="int" Nullable="false" />
+    <Property Name="DOC_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CURNCY_COD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="AMOUNT" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+    <Property Name="HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="NAME" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="BANK" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="CHECK_NO" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RS_UTC_DT" Type="datetime" />
+    <Property Name="USR_ID" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="US_GASSTN_HIST_COUNT_DOLLARS">
+    <Key>
+      <PropertyRef Name="STR_ID" />
+      <PropertyRef Name="DAT" />
+      <PropertyRef Name="GROUP_ID" />
+      <PropertyRef Name="SHIFT_NO" />
+      <PropertyRef Name="DOC_ID" />
+    </Key>
+    <Property Name="STR_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DAT" Type="datetime" Nullable="false" />
+    <Property Name="GROUP_ID" Type="int" Nullable="false" />
+    <Property Name="SHIFT_NO" Type="int" Nullable="false" />
+    <Property Name="DOC_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CURNCY_COD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SEQ_NO" Type="int" Nullable="false" />
+    <Property Name="CURNCY_UNIT" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UNIT_TYP" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="VAL" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+    <Property Name="COUNTED" Type="int" />
+    <Property Name="AMOUNT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="RS_UTC_DT" Type="datetime" />
+    <Property Name="USR_ID" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="US_GASSTN_HIST_COUNT_GUILDERS">
+    <Key>
+      <PropertyRef Name="STR_ID" />
+      <PropertyRef Name="DAT" />
+      <PropertyRef Name="GROUP_ID" />
+      <PropertyRef Name="SHIFT_NO" />
+      <PropertyRef Name="DOC_ID" />
+    </Key>
+    <Property Name="STR_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DAT" Type="datetime" Nullable="false" />
+    <Property Name="GROUP_ID" Type="int" Nullable="false" />
+    <Property Name="SHIFT_NO" Type="int" Nullable="false" />
+    <Property Name="DOC_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CURNCY_COD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SEQ_NO" Type="int" Nullable="false" />
+    <Property Name="CURNCY_UNIT" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UNIT_TYP" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="VAL" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+    <Property Name="COUNTED" Type="int" />
+    <Property Name="AMOUNT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="RS_UTC_DT" Type="datetime" />
+    <Property Name="USR_ID" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="US_GASSTN_HIST_COUNT_STORE_CREDITS">
+    <Key>
+      <PropertyRef Name="STR_ID" />
+      <PropertyRef Name="DAT" />
+      <PropertyRef Name="GROUP_ID" />
+      <PropertyRef Name="SHIFT_NO" />
+      <PropertyRef Name="DOC_ID" />
+    </Key>
+    <Property Name="STR_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DAT" Type="datetime" Nullable="false" />
+    <Property Name="GROUP_ID" Type="int" Nullable="false" />
+    <Property Name="SHIFT_NO" Type="int" Nullable="false" />
+    <Property Name="DOC_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STC_NO" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="GFC_COD" Type="varchar" MaxLength="10" />
+    <Property Name="DESCR" Type="varchar" MaxLength="30" />
+    <Property Name="AMOUNT" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+    <Property Name="VEHICLE_NO" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CURR_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CUST_NO" Type="varchar" MaxLength="15" />
+    <Property Name="NAM" Type="varchar" MaxLength="40" />
+    <Property Name="RS_UTC_DT" Type="datetime" />
+    <Property Name="USR_ID" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="US_GASSTN_HIST_COUNT_VOUCHERS">
+    <Key>
+      <PropertyRef Name="STR_ID" />
+      <PropertyRef Name="DAT" />
+      <PropertyRef Name="GROUP_ID" />
+      <PropertyRef Name="SHIFT_NO" />
+      <PropertyRef Name="DOC_ID" />
+    </Key>
+    <Property Name="STR_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DAT" Type="datetime" Nullable="false" />
+    <Property Name="GROUP_ID" Type="int" Nullable="false" />
+    <Property Name="SHIFT_NO" Type="int" Nullable="false" />
+    <Property Name="DOC_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GFC_NO" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="GFC_COD" Type="varchar" MaxLength="10" />
+    <Property Name="DESCR" Type="varchar" MaxLength="30" />
+    <Property Name="AMOUNT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CUST_NO" Type="varchar" MaxLength="15" />
+    <Property Name="NAM" Type="varchar" MaxLength="40" />
+    <Property Name="RS_UTC_DT" Type="datetime" />
+    <Property Name="USR_ID" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="US_GASSTN_HIST_NO_SALES">
+    <Key>
+      <PropertyRef Name="STR_ID" />
+      <PropertyRef Name="DAT" />
+      <PropertyRef Name="GROUP_ID" />
+      <PropertyRef Name="SHIFT_NO" />
+      <PropertyRef Name="DOC_ID" />
+    </Key>
+    <Property Name="STR_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DAT" Type="datetime" Nullable="false" />
+    <Property Name="GROUP_ID" Type="int" Nullable="false" />
+    <Property Name="SHIFT_NO" Type="int" Nullable="false" />
+    <Property Name="DOC_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VOLUME" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="FUEL_COD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DOC_NO" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="VEHICLE_NO" Type="varchar" MaxLength="30" />
+    <Property Name="EXP_ACCOUNT" Type="varchar" MaxLength="10" />
+    <Property Name="PROFIT_CENTER" Type="varchar" MaxLength="10" />
+    <Property Name="INV_ADJUSTMENT" Type="varchar" MaxLength="1" />
+    <Property Name="RS_UTC_DT" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="US_GASSTN_HIST_PUMPS">
+    <Key>
+      <PropertyRef Name="STR_ID" />
+      <PropertyRef Name="DAT" />
+      <PropertyRef Name="GROUP_ID" />
+      <PropertyRef Name="DOC_ID" />
+    </Key>
+    <Property Name="STR_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DAT" Type="datetime" Nullable="false" />
+    <Property Name="GROUP_ID" Type="int" Nullable="false" />
+    <Property Name="DOC_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SHIFT_NO" Type="int" Nullable="false" />
+    <Property Name="PUMP_NO" Type="int" Nullable="false" />
+    <Property Name="FUEL_COD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SHIFT_NO_DESCR" Type="varchar" MaxLength="30" />
+    <Property Name="PUMP_READ_CLOSE_PREV" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="HAS_ACTIVITY" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="PUMP_READ_OPEN" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+    <Property Name="PUMP_READ_CLOSE" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+    <Property Name="FUEL_VOL_PUMPED" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="DIFF_ON_OPEN" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="RS_UTC_DT" Type="datetime" />
+    <Property Name="USR_ID" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="US_GASSTN_HIST_SHIFTS">
+    <Key>
+      <PropertyRef Name="STR_ID" />
+      <PropertyRef Name="DAT" />
+      <PropertyRef Name="GROUP_ID" />
+      <PropertyRef Name="SHIFT_NO" />
+    </Key>
+    <Property Name="STR_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DAT" Type="datetime" Nullable="false" />
+    <Property Name="GROUP_ID" Type="int" Nullable="false" />
+    <Property Name="SHIFT_NO" Type="int" Nullable="false" />
+    <Property Name="DOC_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SHIFT_NO_DESCR" Type="varchar" MaxLength="30" />
+    <Property Name="ATTENDANT_ID" Type="varchar" MaxLength="10" />
+    <Property Name="CASH_DOLLARS_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CASH_DOLLARS_HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CASH_GUILDERS_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CASH_GUILDERS_HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CHECK_DOLLARS_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CHECK_DOLLARS_HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CHECK_GUILDERS_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CHECK_GUILDERS_HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="STORE_CREDITS_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="STORE_CREDITS_HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="VOUCHERS_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="VOUCHERS_HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="TOTAL_GUILDERS_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="TOTAL_DOLLARS_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="TOTAL_HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="DIESEL_VOL_PUMPED" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="GASOLINE_VOL_PUMPED" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="DIESEL_VOL_NO_SALES" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="GASOLINE_VOL_NO_SALES" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="DIESEL_VOL_SOLD" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="GASOLINE_VOL_SOLD" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="ITEM_NO_DIESEL" Type="varchar" MaxLength="20" />
+    <Property Name="PRICE_LOW_DIESEL" Type="decimal" Precision="15" Scale="4" />
+    <Property Name="VOL_SOLD_LOW_DIESEL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="AMT_SOLD_LOW_DIESEL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PRICE_HIGH_DIESEL" Type="decimal" Precision="15" Scale="4" />
+    <Property Name="VOL_SOLD_HIGH_DIESEL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="AMT_SOLD_HIGH_DIESEL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="UNIT_COST_DIESEL" Type="decimal" Precision="15" Scale="4" />
+    <Property Name="ITEM_NO_GASOLINE" Type="varchar" MaxLength="20" />
+    <Property Name="PRICE_LOW_GASOLINE" Type="decimal" Precision="15" Scale="4" />
+    <Property Name="VOL_SOLD_LOW_GASOLINE" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="AMT_SOLD_LOW_GASOLINE" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PRICE_HIGH_GASOLINE" Type="decimal" Precision="15" Scale="4" />
+    <Property Name="VOL_SOLD_HIGH_GASOLINE" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="AMT_SOLD_HIGH_GASOLINE" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="UNIT_COST_GASOLINE" Type="decimal" Precision="15" Scale="4" />
+    <Property Name="AMT_SALES_DIESEL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="AMT_SALES_GASOLINE" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="AMT_SALES_TOTAL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="EXT_COST_TOTAL" Type="decimal" Precision="15" Scale="4" />
+    <Property Name="SHORT_OVER" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="DRW_ID" Type="varchar" MaxLength="10" />
+    <Property Name="DRW_SESSION_ID" Type="int" />
+    <Property Name="TKT_NO" Type="bigint" />
+    <Property Name="RS_UTC_DT" Type="datetime" />
+    <Property Name="USR_ID" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="US_GASSTN_SY_PUMPS">
+    <Key>
+      <PropertyRef Name="STR_ID" />
+      <PropertyRef Name="PUMP_NO" />
+    </Key>
+    <Property Name="STR_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PUMP_NO" Type="int" Nullable="false" />
+    <Property Name="IS_FULL_SERVICE" Type="varchar" MaxLength="1" />
+    <Property Name="RS_UTC_DT" Type="datetime" />
+    <Property Name="USR_ID" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="US_GASSTN_SY_SHIFTS">
+    <Key>
+      <PropertyRef Name="STR_ID" />
+      <PropertyRef Name="SHIFT_NO" />
+    </Key>
+    <Property Name="STR_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SHIFT_NO" Type="int" Nullable="false" />
+    <Property Name="GROUP_ID" Type="int" Nullable="false" />
+    <Property Name="DESCR" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="IS_FULL_SERVICE" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="IS_ACTIVE" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="RS_UTC_DT" Type="datetime" />
+    <Property Name="USR_ID" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BM.dbo.US_VI_GASSTN_DOC_BANK_DEPOSITS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="US_VI_GASSTN_DOC_BANK_DEPOSITS">
+    <Key>
+      <PropertyRef Name="STR_ID" />
+      <PropertyRef Name="DAT" />
+      <PropertyRef Name="SHIFT_NO" />
+      <PropertyRef Name="CURNCY_COD" />
+    </Key>
+    <Property Name="STR_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DAT" Type="datetime" Nullable="false" />
+    <Property Name="SHIFT_NO" Type="int" Nullable="false" />
+    <Property Name="CURNCY_COD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="BANK_ACCT" Type="varchar" MaxLength="30" />
+    <Property Name="CURNCY_DESCR" Type="varchar" MaxLength="30" />
+    <Property Name="UNIT_250_COUNT" Type="int" />
+    <Property Name="UNIT_250_AMOUNT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="UNIT_100_COUNT" Type="int" />
+    <Property Name="UNIT_100_AMOUNT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="UNIT_50_COUNT" Type="int" />
+    <Property Name="UNIT_50_AMOUNT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="UNIT_25_20_COUNT" Type="int" />
+    <Property Name="UNIT_25_20_AMOUNT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="UNIT_10_COUNT" Type="int" />
+    <Property Name="UNIT_10_AMOUNT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="UNIT_5_COUNT" Type="int" />
+    <Property Name="UNIT_5_AMOUNT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="UNIT_1_COUNT" Type="int" />
+    <Property Name="COINS_AMOUNT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="UNIT_1_AMOUNT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CASH_TOTAL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CHECKS_COUNT" Type="int" />
+    <Property Name="CHECKS_AMOUNT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="GRAND_TOTAL" Type="decimal" Precision="15" Scale="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BM.dbo.US_VI_GASSTN_DOC_BATCH' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="US_VI_GASSTN_DOC_BATCH">
+    <Key>
+      <PropertyRef Name="STR_ID" />
+      <PropertyRef Name="DAT" />
+      <PropertyRef Name="GROUP_ID" />
+    </Key>
+    <Property Name="STR_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DAT" Type="datetime" Nullable="false" />
+    <Property Name="GROUP_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BM.dbo.US_VI_GASSTN_DOC_SHIFTS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="US_VI_GASSTN_DOC_SHIFTS">
+    <Key>
+      <PropertyRef Name="STR_ID" />
+      <PropertyRef Name="DAT" />
+      <PropertyRef Name="SHIFT_NO" />
+    </Key>
+    <Property Name="STR_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DAT" Type="datetime" Nullable="false" />
+    <Property Name="SHIFT_NO" Type="int" Nullable="false" />
+    <Property Name="SHIFT_NO_DESCR" Type="varchar" MaxLength="30" />
+    <Property Name="ATTENDANT_ID" Type="varchar" MaxLength="10" />
+    <Property Name="CASH_DOLLARS_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CASH_DOLLARS_HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CASH_GUILDERS_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CASH_GUILDERS_HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CHECK_DOLLARS_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CHECK_DOLLARS_HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CHECK_GUILDERS_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CHECK_GUILDERS_HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="VOUCHERS_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="VOUCHERS_HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="DIESEL_VOL_SOLD" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="GASOLINE_VOL_SOLD" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="TOTAL_GUILDERS_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="TOTAL_DOLLARS_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="TOTAL_HOME_CURNCY_AMT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="ITEM_NO_DIESEL" Type="varchar" MaxLength="20" />
+    <Property Name="PRICE_LOW_DIESEL" Type="decimal" Precision="15" Scale="4" />
+    <Property Name="VOL_SOLD_LOW_DIESEL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="AMT_SOLD_LOW_DIESEL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PRICE_HIGH_DIESEL" Type="decimal" Precision="15" Scale="4" />
+    <Property Name="VOL_SOLD_HIGH_DIESEL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="AMT_SOLD_HIGH_DIESEL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="ITEM_NO_GASOLINE" Type="varchar" MaxLength="20" />
+    <Property Name="PRICE_LOW_GASOLINE" Type="decimal" Precision="15" Scale="4" />
+    <Property Name="VOL_SOLD_LOW_GASOLINE" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="AMT_SOLD_LOW_GASOLINE" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PRICE_HIGH_GASOLINE" Type="decimal" Precision="15" Scale="4" />
+    <Property Name="VOL_SOLD_HIGH_GASOLINE" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="AMT_SOLD_HIGH_GASOLINE" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="AMT_SALES_DIESEL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="AMT_SALES_GASOLINE" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="AMT_SALES_TOTAL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="SHORT_OVER" Type="decimal" Precision="15" Scale="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BM.dbo.US_VI_GASSTN_STORE_CREDITS_AVAIL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="US_VI_GASSTN_STORE_CREDITS_AVAIL">
+    <Key>
+      <PropertyRef Name="STC_NO" />
+      <PropertyRef Name="AMTISSUED" />
+    </Key>
+    <Property Name="DAT" Type="datetime" />
+    <Property Name="STC_NO" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="AMTISSUED" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+    <Property Name="AMTAVAIL" Type="decimal" Precision="38" Scale="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BM.dbo.VI_SY_USR_WITH_ADDRESS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VI_SY_USR_WITH_ADDRESS">
+    <Key>
+      <PropertyRef Name="USR_ID" />
+      <PropertyRef Name="NAM" />
+      <PropertyRef Name="WRKGRP_ID" />
+      <PropertyRef Name="ALLOW_OTHR_WRKGRPS" />
+      <PropertyRef Name="SEC_COD" />
+      <PropertyRef Name="IS_PS_USR" />
+      <PropertyRef Name="IS_PS_MGR" />
+      <PropertyRef Name="IS_SLS_REP" />
+      <PropertyRef Name="IS_BUYER" />
+      <PropertyRef Name="LOGIN_DISABLED" />
+      <PropertyRef Name="CHNG_PWD_NXT_LOGIN" />
+      <PropertyRef Name="LOGIN_FAIL_CNT" />
+      <PropertyRef Name="IS_OE_USR" />
+      <PropertyRef Name="IS_OE_MGR" />
+      <PropertyRef Name="LBL_NUMBER" />
+      <PropertyRef Name="LBL_NAME" />
+    </Key>
+    <Property Name="USR_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="NAM" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="NAM_UPR" Type="varchar" MaxLength="40" />
+    <Property Name="INITIALS" Type="varchar" MaxLength="5" />
+    <Property Name="PWD" Type="varchar" MaxLength="15" />
+    <Property Name="ADRS_1" Type="varchar" MaxLength="40" />
+    <Property Name="ADRS_2" Type="varchar" MaxLength="40" />
+    <Property Name="ADRS_3" Type="varchar" MaxLength="40" />
+    <Property Name="CITY" Type="varchar" MaxLength="20" />
+    <Property Name="STATE" Type="varchar" MaxLength="10" />
+    <Property Name="ZIP_COD" Type="varchar" MaxLength="15" />
+    <Property Name="CNTRY" Type="varchar" MaxLength="20" />
+    <Property Name="CONTCT_1" Type="varchar" MaxLength="40" />
+    <Property Name="CONTCT_2" Type="varchar" MaxLength="40" />
+    <Property Name="PHONE_1" Type="varchar" MaxLength="25" />
+    <Property Name="PHONE_2" Type="varchar" MaxLength="25" />
+    <Property Name="FAX_1" Type="varchar" MaxLength="25" />
+    <Property Name="FAX_2" Type="varchar" MaxLength="25" />
+    <Property Name="EMAIL_ADRS_1" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL_ADRS_2" Type="varchar" MaxLength="50" />
+    <Property Name="URL_1" Type="varchar" MaxLength="100" />
+    <Property Name="URL_2" Type="varchar" MaxLength="100" />
+    <Property Name="WRKGRP_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ALLOW_OTHR_WRKGRPS" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="DEPT" Type="varchar" MaxLength="10" />
+    <Property Name="EMP_NO" Type="varchar" MaxLength="15" />
+    <Property Name="SEC_COD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="IS_PS_USR" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="IS_PS_MGR" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="PS_SEC_COD" Type="varchar" MaxLength="10" />
+    <Property Name="IS_SLS_REP" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="IS_BUYER" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="LOGIN_DISABLED" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="CHNG_PWD_NXT_LOGIN" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="LST_PWD_CHNG_DAT" Type="datetime" />
+    <Property Name="LST_LOGIN_DT" Type="datetime" />
+    <Property Name="LST_STR_ID" Type="varchar" MaxLength="10" />
+    <Property Name="LST_STA_ID" Type="varchar" MaxLength="10" />
+    <Property Name="LST_DRW_ID" Type="varchar" MaxLength="10" />
+    <Property Name="COMMIS_COD" Type="varchar" MaxLength="10" />
+    <Property Name="LST_WRKGRP_ID" Type="varchar" MaxLength="10" />
+    <Property Name="LOGIN_FAIL_CNT" Type="int" Nullable="false" />
+    <Property Name="PREV_PWD_1" Type="varchar" MaxLength="15" />
+    <Property Name="PREV_PWD_2" Type="varchar" MaxLength="15" />
+    <Property Name="PREV_PWD_3" Type="varchar" MaxLength="15" />
+    <Property Name="LST_CLCK_IN_DT" Type="datetime" />
+    <Property Name="LST_CLCK_OUT_DT" Type="datetime" />
+    <Property Name="BIO_ID_DATA" Type="image" />
+    <Property Name="IS_OE_USR" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="IS_OE_MGR" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="OE_SEC_COD" Type="varchar" MaxLength="10" />
+    <Property Name="LST_LOGIN_WKSTN_NAM" Type="varchar" MaxLength="128" />
+    <Property Name="LST_TE_LOGIN_DT" Type="datetime" />
+    <Property Name="LST_TE_WRKGRP_ID" Type="varchar" MaxLength="10" />
+    <Property Name="LST_TE_LOGIN_WKSTN_NAM" Type="varchar" MaxLength="128" />
+    <Property Name="COPY_FRM_USR_ID" Type="varchar" MaxLength="10" />
+    <Property Name="RS_UTC_DT" Type="datetime" />
+    <Property Name="LST_MAINT_DT" Type="datetime" />
+    <Property Name="LST_MAINT_USR_ID" Type="varchar" MaxLength="10" />
+    <Property Name="LST_LCK_DT" Type="datetime" />
+    <Property Name="ROW_TS" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="CITY_STATE_ZIP_CNTRY" Type="varchar" MaxLength="70" />
+    <Property Name="ADRS_MSK" Type="varchar" MaxLength="4" />
+    <Property Name="LBL_NUMBER" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LBL_NAME" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="LBL_ADDRESS_1" Type="varchar" MaxLength="70" />
+    <Property Name="LBL_ADDRESS_2" Type="varchar" MaxLength="70" />
+    <Property Name="LBL_ADDRESS_3" Type="varchar" MaxLength="70" />
+    <Property Name="LBL_ADDRESS_4" Type="varchar" MaxLength="70" />
+  </EntityType>
+  <Association Name="FK_SY_CURNCY_UNITS_SY_CURNCY_COD">
+    <End Role="SY_CURNCY_COD" Type="Self.SY_CURNCY_COD" Multiplicity="1" />
+    <End Role="SY_CURNCY_UNITS" Type="Self.SY_CURNCY_UNITS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SY_CURNCY_COD">
+        <PropertyRef Name="CURNCY_COD" />
+      </Principal>
+      <Dependent Role="SY_CURNCY_UNITS">
+        <PropertyRef Name="CURNCY_COD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="USER_SP_GASSTN_CALC_COUNT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_CALC_COUNT_OLD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_CALC_DEPOSITS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_CALC_PUMPS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_COPY_TO_US_GASSTN_HIST" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_COPY_TO_US_GASSTN_HIST_DELIVERIES" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_COPY_TO_US_MARINA_DOC_BANK_DEPOSITS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_CREATE_BATCH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_DELETE_DOCS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_DROP_POST_BATCH_AUDIT_TABLE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_INSERT_FUEL_QTY_AVAIL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_POST_BATCH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_POST_BATCH_RECOVERY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_PRINT_BATCH_EDIT_LIST" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_PRINT_DEPOSIT_DOLLARS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DepositNo" Type="varchar" Mode="In" />
+    <Parameter Name="ShiftNo" Type="int" Mode="In" />
+    <Parameter Name="CurncyCod" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_PRINT_DEPOSIT_GUILDERS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DepositNo" Type="varchar" Mode="In" />
+    <Parameter Name="ShiftNo" Type="int" Mode="In" />
+    <Parameter Name="CurncyCod" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_PRINT_FUEL_SALES" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CalMonth" Type="varchar" Mode="In" />
+    <Parameter Name="CalYear" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_PRINT_STORE_CREDITS_STATEMENT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CustNo" Type="varchar" Mode="In" />
+    <Parameter Name="CalMonth" Type="varchar" Mode="In" />
+    <Parameter Name="CalYear" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_RPT_ATTENDANT_SHORT_OVER_MONTH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CalMonth" Type="varchar" Mode="In" />
+    <Parameter Name="CalYear" Type="int" Mode="In" />
+    <Parameter Name="ErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USER_SP_GASSTN_RPT_FUEL_SALES_12_MONTHS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CalYear" Type="int" Mode="In" />
+    <Parameter Name="ShowPreviousYear" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="BMDBModelStoreContainer">
+    <EntitySet Name="SY_CURNCY_COD" EntityType="Self.SY_CURNCY_COD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SY_CURNCY_UNITS" EntityType="Self.SY_CURNCY_UNITS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SY_USR" EntityType="Self.SY_USR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="US_GASSTN_CTL" EntityType="Self.US_GASSTN_CTL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="US_GASSTN_HIST_BATCH" EntityType="Self.US_GASSTN_HIST_BATCH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="US_GASSTN_HIST_COUNT_CHECKS" EntityType="Self.US_GASSTN_HIST_COUNT_CHECKS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="US_GASSTN_HIST_COUNT_DOLLARS" EntityType="Self.US_GASSTN_HIST_COUNT_DOLLARS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="US_GASSTN_HIST_COUNT_GUILDERS" EntityType="Self.US_GASSTN_HIST_COUNT_GUILDERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="US_GASSTN_HIST_COUNT_STORE_CREDITS" EntityType="Self.US_GASSTN_HIST_COUNT_STORE_CREDITS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="US_GASSTN_HIST_COUNT_VOUCHERS" EntityType="Self.US_GASSTN_HIST_COUNT_VOUCHERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="US_GASSTN_HIST_NO_SALES" EntityType="Self.US_GASSTN_HIST_NO_SALES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="US_GASSTN_HIST_PUMPS" EntityType="Self.US_GASSTN_HIST_PUMPS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="US_GASSTN_HIST_SHIFTS" EntityType="Self.US_GASSTN_HIST_SHIFTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="US_GASSTN_SY_PUMPS" EntityType="Self.US_GASSTN_SY_PUMPS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="US_GASSTN_SY_SHIFTS" EntityType="Self.US_GASSTN_SY_SHIFTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="US_VI_GASSTN_DOC_BANK_DEPOSITS" EntityType="Self.US_VI_GASSTN_DOC_BANK_DEPOSITS" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[STR_ID] AS [STR_ID], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[DAT] AS [DAT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[SHIFT_NO] AS [SHIFT_NO], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[CURNCY_COD] AS [CURNCY_COD], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[BANK_ACCT] AS [BANK_ACCT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[CURNCY_DESCR] AS [CURNCY_DESCR], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[UNIT_250_COUNT] AS [UNIT_250_COUNT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[UNIT_250_AMOUNT] AS [UNIT_250_AMOUNT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[UNIT_100_COUNT] AS [UNIT_100_COUNT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[UNIT_100_AMOUNT] AS [UNIT_100_AMOUNT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[UNIT_50_COUNT] AS [UNIT_50_COUNT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[UNIT_50_AMOUNT] AS [UNIT_50_AMOUNT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[UNIT_25_20_COUNT] AS [UNIT_25_20_COUNT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[UNIT_25_20_AMOUNT] AS [UNIT_25_20_AMOUNT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[UNIT_10_COUNT] AS [UNIT_10_COUNT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[UNIT_10_AMOUNT] AS [UNIT_10_AMOUNT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[UNIT_5_COUNT] AS [UNIT_5_COUNT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[UNIT_5_AMOUNT] AS [UNIT_5_AMOUNT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[UNIT_1_COUNT] AS [UNIT_1_COUNT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[COINS_AMOUNT] AS [COINS_AMOUNT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[UNIT_1_AMOUNT] AS [UNIT_1_AMOUNT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[CASH_TOTAL] AS [CASH_TOTAL], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[CHECKS_COUNT] AS [CHECKS_COUNT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[CHECKS_AMOUNT] AS [CHECKS_AMOUNT], 
+    [US_VI_GASSTN_DOC_BANK_DEPOSITS].[GRAND_TOTAL] AS [GRAND_TOTAL]
+    FROM [dbo].[US_VI_GASSTN_DOC_BANK_DEPOSITS] AS [US_VI_GASSTN_DOC_BANK_DEPOSITS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="US_VI_GASSTN_DOC_BATCH" EntityType="Self.US_VI_GASSTN_DOC_BATCH" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [US_VI_GASSTN_DOC_BATCH].[STR_ID] AS [STR_ID], 
+    [US_VI_GASSTN_DOC_BATCH].[DAT] AS [DAT], 
+    [US_VI_GASSTN_DOC_BATCH].[GROUP_ID] AS [GROUP_ID]
+    FROM [dbo].[US_VI_GASSTN_DOC_BATCH] AS [US_VI_GASSTN_DOC_BATCH]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="US_VI_GASSTN_DOC_SHIFTS" EntityType="Self.US_VI_GASSTN_DOC_SHIFTS" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [US_VI_GASSTN_DOC_SHIFTS].[STR_ID] AS [STR_ID], 
+    [US_VI_GASSTN_DOC_SHIFTS].[DAT] AS [DAT], 
+    [US_VI_GASSTN_DOC_SHIFTS].[SHIFT_NO] AS [SHIFT_NO], 
+    [US_VI_GASSTN_DOC_SHIFTS].[SHIFT_NO_DESCR] AS [SHIFT_NO_DESCR], 
+    [US_VI_GASSTN_DOC_SHIFTS].[ATTENDANT_ID] AS [ATTENDANT_ID], 
+    [US_VI_GASSTN_DOC_SHIFTS].[CASH_DOLLARS_AMT] AS [CASH_DOLLARS_AMT], 
+    [US_VI_GASSTN_DOC_SHIFTS].[CASH_DOLLARS_HOME_CURNCY_AMT] AS [CASH_DOLLARS_HOME_CURNCY_AMT], 
+    [US_VI_GASSTN_DOC_SHIFTS].[CASH_GUILDERS_AMT] AS [CASH_GUILDERS_AMT], 
+    [US_VI_GASSTN_DOC_SHIFTS].[CASH_GUILDERS_HOME_CURNCY_AMT] AS [CASH_GUILDERS_HOME_CURNCY_AMT], 
+    [US_VI_GASSTN_DOC_SHIFTS].[CHECK_DOLLARS_AMT] AS [CHECK_DOLLARS_AMT], 
+    [US_VI_GASSTN_DOC_SHIFTS].[CHECK_DOLLARS_HOME_CURNCY_AMT] AS [CHECK_DOLLARS_HOME_CURNCY_AMT], 
+    [US_VI_GASSTN_DOC_SHIFTS].[CHECK_GUILDERS_AMT] AS [CHECK_GUILDERS_AMT], 
+    [US_VI_GASSTN_DOC_SHIFTS].[CHECK_GUILDERS_HOME_CURNCY_AMT] AS [CHECK_GUILDERS_HOME_CURNCY_AMT], 
+    [US_VI_GASSTN_DOC_SHIFTS].[VOUCHERS_AMT] AS [VOUCHERS_AMT], 
+    [US_VI_GASSTN_DOC_SHIFTS].[VOUCHERS_HOME_CURNCY_AMT] AS [VOUCHERS_HOME_CURNCY_AMT], 
+    [US_VI_GASSTN_DOC_SHIFTS].[DIESEL_VOL_SOLD] AS [DIESEL_VOL_SOLD], 
+    [US_VI_GASSTN_DOC_SHIFTS].[GASOLINE_VOL_SOLD] AS [GASOLINE_VOL_SOLD], 
+    [US_VI_GASSTN_DOC_SHIFTS].[TOTAL_GUILDERS_AMT] AS [TOTAL_GUILDERS_AMT], 
+    [US_VI_GASSTN_DOC_SHIFTS].[TOTAL_DOLLARS_AMT] AS [TOTAL_DOLLARS_AMT], 
+    [US_VI_GASSTN_DOC_SHIFTS].[TOTAL_HOME_CURNCY_AMT] AS [TOTAL_HOME_CURNCY_AMT], 
+    [US_VI_GASSTN_DOC_SHIFTS].[ITEM_NO_DIESEL] AS [ITEM_NO_DIESEL], 
+    [US_VI_GASSTN_DOC_SHIFTS].[PRICE_LOW_DIESEL] AS [PRICE_LOW_DIESEL], 
+    [US_VI_GASSTN_DOC_SHIFTS].[VOL_SOLD_LOW_DIESEL] AS [VOL_SOLD_LOW_DIESEL], 
+    [US_VI_GASSTN_DOC_SHIFTS].[AMT_SOLD_LOW_DIESEL] AS [AMT_SOLD_LOW_DIESEL], 
+    [US_VI_GASSTN_DOC_SHIFTS].[PRICE_HIGH_DIESEL] AS [PRICE_HIGH_DIESEL], 
+    [US_VI_GASSTN_DOC_SHIFTS].[VOL_SOLD_HIGH_DIESEL] AS [VOL_SOLD_HIGH_DIESEL], 
+    [US_VI_GASSTN_DOC_SHIFTS].[AMT_SOLD_HIGH_DIESEL] AS [AMT_SOLD_HIGH_DIESEL], 
+    [US_VI_GASSTN_DOC_SHIFTS].[ITEM_NO_GASOLINE] AS [ITEM_NO_GASOLINE], 
+    [US_VI_GASSTN_DOC_SHIFTS].[PRICE_LOW_GASOLINE] AS [PRICE_LOW_GASOLINE], 
+    [US_VI_GASSTN_DOC_SHIFTS].[VOL_SOLD_LOW_GASOLINE] AS [VOL_SOLD_LOW_GASOLINE], 
+    [US_VI_GASSTN_DOC_SHIFTS].[AMT_SOLD_LOW_GASOLINE] AS [AMT_SOLD_LOW_GASOLINE], 
+    [US_VI_GASSTN_DOC_SHIFTS].[PRICE_HIGH_GASOLINE] AS [PRICE_HIGH_GASOLINE], 
+    [US_VI_GASSTN_DOC_SHIFTS].[VOL_SOLD_HIGH_GASOLINE] AS [VOL_SOLD_HIGH_GASOLINE], 
+    [US_VI_GASSTN_DOC_SHIFTS].[AMT_SOLD_HIGH_GASOLINE] AS [AMT_SOLD_HIGH_GASOLINE], 
+    [US_VI_GASSTN_DOC_SHIFTS].[AMT_SALES_DIESEL] AS [AMT_SALES_DIESEL], 
+    [US_VI_GASSTN_DOC_SHIFTS].[AMT_SALES_GASOLINE] AS [AMT_SALES_GASOLINE], 
+    [US_VI_GASSTN_DOC_SHIFTS].[AMT_SALES_TOTAL] AS [AMT_SALES_TOTAL], 
+    [US_VI_GASSTN_DOC_SHIFTS].[SHORT_OVER] AS [SHORT_OVER]
+    FROM [dbo].[US_VI_GASSTN_DOC_SHIFTS] AS [US_VI_GASSTN_DOC_SHIFTS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="US_VI_GASSTN_STORE_CREDITS_AVAIL" EntityType="Self.US_VI_GASSTN_STORE_CREDITS_AVAIL" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [US_VI_GASSTN_STORE_CREDITS_AVAIL].[DAT] AS [DAT], 
+    [US_VI_GASSTN_STORE_CREDITS_AVAIL].[STC_NO] AS [STC_NO], 
+    [US_VI_GASSTN_STORE_CREDITS_AVAIL].[AMTISSUED] AS [AMTISSUED], 
+    [US_VI_GASSTN_STORE_CREDITS_AVAIL].[AMTAVAIL] AS [AMTAVAIL]
+    FROM [dbo].[US_VI_GASSTN_STORE_CREDITS_AVAIL] AS [US_VI_GASSTN_STORE_CREDITS_AVAIL]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VI_SY_USR_WITH_ADDRESS" EntityType="Self.VI_SY_USR_WITH_ADDRESS" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VI_SY_USR_WITH_ADDRESS].[USR_ID] AS [USR_ID], 
+    [VI_SY_USR_WITH_ADDRESS].[NAM] AS [NAM], 
+    [VI_SY_USR_WITH_ADDRESS].[NAM_UPR] AS [NAM_UPR], 
+    [VI_SY_USR_WITH_ADDRESS].[INITIALS] AS [INITIALS], 
+    [VI_SY_USR_WITH_ADDRESS].[PWD] AS [PWD], 
+    [VI_SY_USR_WITH_ADDRESS].[ADRS_1] AS [ADRS_1], 
+    [VI_SY_USR_WITH_ADDRESS].[ADRS_2] AS [ADRS_2], 
+    [VI_SY_USR_WITH_ADDRESS].[ADRS_3] AS [ADRS_3], 
+    [VI_SY_USR_WITH_ADDRESS].[CITY] AS [CITY], 
+    [VI_SY_USR_WITH_ADDRESS].[STATE] AS [STATE], 
+    [VI_SY_USR_WITH_ADDRESS].[ZIP_COD] AS [ZIP_COD], 
+    [VI_SY_USR_WITH_ADDRESS].[CNTRY] AS [CNTRY], 
+    [VI_SY_USR_WITH_ADDRESS].[CONTCT_1] AS [CONTCT_1], 
+    [VI_SY_USR_WITH_ADDRESS].[CONTCT_2] AS [CONTCT_2], 
+    [VI_SY_USR_WITH_ADDRESS].[PHONE_1] AS [PHONE_1], 
+    [VI_SY_USR_WITH_ADDRESS].[PHONE_2] AS [PHONE_2], 
+    [VI_SY_USR_WITH_ADDRESS].[FAX_1] AS [FAX_1], 
+    [VI_SY_USR_WITH_ADDRESS].[FAX_2] AS [FAX_2], 
+    [VI_SY_USR_WITH_ADDRESS].[EMAIL_ADRS_1] AS [EMAIL_ADRS_1], 
+    [VI_SY_USR_WITH_ADDRESS].[EMAIL_ADRS_2] AS [EMAIL_ADRS_2], 
+    [VI_SY_USR_WITH_ADDRESS].[URL_1] AS [URL_1], 
+    [VI_SY_USR_WITH_ADDRESS].[URL_2] AS [URL_2], 
+    [VI_SY_USR_WITH_ADDRESS].[WRKGRP_ID] AS [WRKGRP_ID], 
+    [VI_SY_USR_WITH_ADDRESS].[ALLOW_OTHR_WRKGRPS] AS [ALLOW_OTHR_WRKGRPS], 
+    [VI_SY_USR_WITH_ADDRESS].[DEPT] AS [DEPT], 
+    [VI_SY_USR_WITH_ADDRESS].[EMP_NO] AS [EMP_NO], 
+    [VI_SY_USR_WITH_ADDRESS].[SEC_COD] AS [SEC_COD], 
+    [VI_SY_USR_WITH_ADDRESS].[IS_PS_USR] AS [IS_PS_USR], 
+    [VI_SY_USR_WITH_ADDRESS].[IS_PS_MGR] AS [IS_PS_MGR], 
+    [VI_SY_USR_WITH_ADDRESS].[PS_SEC_COD] AS [PS_SEC_COD], 
+    [VI_SY_USR_WITH_ADDRESS].[IS_SLS_REP] AS [IS_SLS_REP], 
+    [VI_SY_USR_WITH_ADDRESS].[IS_BUYER] AS [IS_BUYER], 
+    [VI_SY_USR_WITH_ADDRESS].[LOGIN_DISABLED] AS [LOGIN_DISABLED], 
+    [VI_SY_USR_WITH_ADDRESS].[CHNG_PWD_NXT_LOGIN] AS [CHNG_PWD_NXT_LOGIN], 
+    [VI_SY_USR_WITH_ADDRESS].[LST_PWD_CHNG_DAT] AS [LST_PWD_CHNG_DAT], 
+    [VI_SY_USR_WITH_ADDRESS].[LST_LOGIN_DT] AS [LST_LOGIN_DT], 
+    [VI_SY_USR_WITH_ADDRESS].[LST_STR_ID] AS [LST_STR_ID], 
+    [VI_SY_USR_WITH_ADDRESS].[LST_STA_ID] AS [LST_STA_ID], 
+    [VI_SY_USR_WITH_ADDRESS].[LST_DRW_ID] AS [LST_DRW_ID], 
+    [VI_SY_USR_WITH_ADDRESS].[COMMIS_COD] AS [COMMIS_COD], 
+    [VI_SY_USR_WITH_ADDRESS].[LST_WRKGRP_ID] AS [LST_WRKGRP_ID], 
+    [VI_SY_USR_WITH_ADDRESS].[LOGIN_FAIL_CNT] AS [LOGIN_FAIL_CNT], 
+    [VI_SY_USR_WITH_ADDRESS].[PREV_PWD_1] AS [PREV_PWD_1], 
+    [VI_SY_USR_WITH_ADDRESS].[PREV_PWD_2] AS [PREV_PWD_2], 
+    [VI_SY_USR_WITH_ADDRESS].[PREV_PWD_3] AS [PREV_PWD_3], 
+    [VI_SY_USR_WITH_ADDRESS].[LST_CLCK_IN_DT] AS [LST_CLCK_IN_DT], 
+    [VI_SY_USR_WITH_ADDRESS].[LST_CLCK_OUT_DT] AS [LST_CLCK_OUT_DT], 
+    [VI_SY_USR_WITH_ADDRESS].[BIO_ID_DATA] AS [BIO_ID_DATA], 
+    [VI_SY_USR_WITH_ADDRESS].[IS_OE_USR] AS [IS_OE_USR], 
+    [VI_SY_USR_WITH_ADDRESS].[IS_OE_MGR] AS [IS_OE_MGR], 
+    [VI_SY_USR_WITH_ADDRESS].[OE_SEC_COD] AS [OE_SEC_COD], 
+    [VI_SY_USR_WITH_ADDRESS].[LST_LOGIN_WKSTN_NAM] AS [LST_LOGIN_WKSTN_NAM], 
+    [VI_SY_USR_WITH_ADDRESS].[LST_TE_LOGIN_DT] AS [LST_TE_LOGIN_DT], 
+    [VI_SY_USR_WITH_ADDRESS].[LST_TE_WRKGRP_ID] AS [LST_TE_WRKGRP_ID], 
+    [VI_SY_USR_WITH_ADDRESS].[LST_TE_LOGIN_WKSTN_NAM] AS [LST_TE_LOGIN_WKSTN_NAM], 
+    [VI_SY_USR_WITH_ADDRESS].[COPY_FRM_USR_ID] AS [COPY_FRM_USR_ID], 
+    [VI_SY_USR_WITH_ADDRESS].[RS_UTC_DT] AS [RS_UTC_DT], 
+    [VI_SY_USR_WITH_ADDRESS].[LST_MAINT_DT] AS [LST_MAINT_DT], 
+    [VI_SY_USR_WITH_ADDRESS].[LST_MAINT_USR_ID] AS [LST_MAINT_USR_ID], 
+    [VI_SY_USR_WITH_ADDRESS].[LST_LCK_DT] AS [LST_LCK_DT], 
+    [VI_SY_USR_WITH_ADDRESS].[ROW_TS] AS [ROW_TS], 
+    [VI_SY_USR_WITH_ADDRESS].[CITY_STATE_ZIP_CNTRY] AS [CITY_STATE_ZIP_CNTRY], 
+    [VI_SY_USR_WITH_ADDRESS].[ADRS_MSK] AS [ADRS_MSK], 
+    [VI_SY_USR_WITH_ADDRESS].[LBL_NUMBER] AS [LBL_NUMBER], 
+    [VI_SY_USR_WITH_ADDRESS].[LBL_NAME] AS [LBL_NAME], 
+    [VI_SY_USR_WITH_ADDRESS].[LBL_ADDRESS_1] AS [LBL_ADDRESS_1], 
+    [VI_SY_USR_WITH_ADDRESS].[LBL_ADDRESS_2] AS [LBL_ADDRESS_2], 
+    [VI_SY_USR_WITH_ADDRESS].[LBL_ADDRESS_3] AS [LBL_ADDRESS_3], 
+    [VI_SY_USR_WITH_ADDRESS].[LBL_ADDRESS_4] AS [LBL_ADDRESS_4]
+    FROM [dbo].[VI_SY_USR_WITH_ADDRESS] AS [VI_SY_USR_WITH_ADDRESS]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_SY_CURNCY_UNITS_SY_CURNCY_COD" Association="Self.FK_SY_CURNCY_UNITS_SY_CURNCY_COD">
+      <End Role="SY_CURNCY_COD" EntitySet="SY_CURNCY_COD" />
+      <End Role="SY_CURNCY_UNITS" EntitySet="SY_CURNCY_UNITS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

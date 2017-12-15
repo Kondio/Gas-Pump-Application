@@ -14,7 +14,7 @@ namespace GasPumpApplication
 {
     public partial class MainMenuForm : MetroForm
     {
-        PumpsControl pumps;
+        PumpsScreen pumps;
         SetupScreen setup;
         ReportsViewsScreen reports;
         public MainMenuForm()
@@ -46,7 +46,7 @@ namespace GasPumpApplication
             {
                 case "Pumpsbtn":
                     if (pumps == null)
-                        pumps = new PumpsControl();
+                        pumps = new PumpsScreen();
                     this.Hide();
                     pumps.FormClosed += (s, args) => this.Close();
                     pumps.Show();
